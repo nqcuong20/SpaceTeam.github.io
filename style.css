@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+/* FONT */
+@font-face {
+    src: url("font/font/Roboto-Light.ttf");
+    font-family: roboto light;
+}
+@font-face {
+    src: url("font/font/Roboto-Bold.ttf");
+    font-family: roboto ;
+}
+
+.bg--color{
+    background-color: #D9263C !important;
+    height: 50px;
+    
+}
+a.nav-link {
+    color: white !important;
+}
+.bg--color2{
+    background-color: #F12A43 !important;
+}
+button.btn.btn-dark.my-2.my-sm-0.mr-4.btn--timkiem {
+    width: 100px;
+    height: 35px;
+    margin-left: -8px;
+}
+input.form-control.mr-sm-2 {
+   
+    border-radius: 3px;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: roboto light;
+}
+.btn--timkiem{
+    font-family: roboto light;
+    font-size: 14px;
+    background-color: black !important;
+}
+.contact .right{
+    border-right: 1px solid rgb(167, 5, 5);
+    color: white;
+}
+.contact .right i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 21px;
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    line-height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.fix span {
+    position: relative;
+    left: 55px;
+    top: -2px;
+    display: block;
+}
+.contact .left  i {
+    position: absolute;
+    top: 50%;
+    
+    font-size: 21px;
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    line-height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.fix{
+    border-right: 1px solid rgb(148, 8, 8);
+}
+.fix i.fas, .icon i{
+    position: absolute;
+    top: 50%;
+    font-size: 21px;
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    line-height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.fix span{
+    font-family: roboto  ;
+    color: white;
+}
+.li--fix li p, .bg--footer p {
+    display: inline;
+    font-family: roboto light;
+    font-weight: 400;
+}
+.li--chinhsach{
+    font-family: roboto light;
+    font-weight: 400;
+}
+.fix--ul {
+    margin-left: 16px;
+}
+.footer--team{
+    background-color: #D9263C;
+    
+}
+.footer--team p{
+    margin-bottom: 0px !important;
+}
+.bg--footer{
+    background-color: #F12A43;
+}
