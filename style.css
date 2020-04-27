@@ -12,7 +12,9 @@
     src: url("font/font/Roboto-Bold.ttf");
     font-family: roboto ;
 }
-
+section.big{
+    background-color: #F7F7F7;
+}
 .bg--color{
     background-color: #D9263C !important;
     height: 50px;
@@ -112,6 +114,10 @@ input.form-control.mr-sm-2 {
 .fix--ul {
     margin-left: 16px;
 }
+
+/* hết phần header */
+
+/* FOOTER */
 .footer--team{
     background-color: #D9263C;
     
@@ -122,3 +128,82 @@ input.form-control.mr-sm-2 {
 .bg--footer{
     background-color: #F12A43;
 }
+
+
+/* DANH MUC SẢN PHẨM */
+.title{
+    background-color: #969696;
+    padding: 12px;
+    color: white;
+    margin-bottom: 0px;
+}
+.list{
+    background-color: white;
+}
+.list-item{
+    border-bottom: 1px solid rgb(211, 207, 207);
+    border-right: 1px solid rgb(211, 207, 207);
+    border-left: 1px solid rgb(211, 207, 207);
+    padding: 7px;
+    text-align: left;
+    transition: 0.4s;
+    text-decoration: none;
+    
+
+}
+.list-item a{
+    color: #333333;
+    text-decoration: none;
+}
+.list-item a:hover{
+    text-decoration: none;
+    color: #333333;
+}
+.list-item:hover{
+    background-color: #d3d1d1;
+    text-decoration: none;
+}
+/*  SẢN PHẨM BÁN CHẠY */
+.product {
+    margin-top:5px;
+    font-size: 13px; 
+    font-weight: bold;
+}
+.product--img{
+    border: 1px solid rgb(196, 192, 192);
+}
+.product .price{
+    color: red;
+}
+.list{
+    background-color: white;
+}
+.product--list-item{
+    border-bottom: 1px solid rgb(211, 207, 207);
+    border-right: 1px solid rgb(211, 207, 207);
+    border-left: 1px solid rgb(211, 207, 207);
+    padding: 7px;
+    text-align: left;
+    transition: 0.4s;
+    text-decoration: none;
+    
+
+}
+.product--list-item a{
+    color: #333333;
+    text-decoration: none;
+}
+.product--list-item a:hover{
+    text-decoration: none;
+    color: #333333;
+}
+.product--list-item:hover{
+    
+    text-decoration: none;
+}
+
+
+
+
+
+ 
