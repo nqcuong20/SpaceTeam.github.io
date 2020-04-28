@@ -346,6 +346,12 @@ li.detail--list-item{
      text-decoration: none;
  }
  
+ /* LIÊN HỆ_PHAN MAIN */
+.col-9.bg_lienhe{
+    background-color: white;
+    border-radius: 10px;
+}
+
  
 
  
