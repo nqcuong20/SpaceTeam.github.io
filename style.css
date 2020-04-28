@@ -133,6 +133,37 @@ input.form-control.mr-sm-2 {
     background-color: #F12A43;
 }
 
+ /* Back to top button
+--------------------------------------------------------------*/ 
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    right: 15px;
+    bottom: 15px;
+    background: #D9263C;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+  }
+  
+  .back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+  
+  .back-to-top:hover {
+    color: #fff;
+    background: #D9263C;
+    transition: background 0.2s ease-in-out;
+  }
+ 
+  /* BACK TO TOP */
+
 
 /* DANH MUC SẢN PHẨM */
 .title{
@@ -209,9 +240,9 @@ input.form-control.mr-sm-2 {
 }
 
 /* SUPPORT */
-.support{
+/* .support{
     margin-left: ;
-}
+} */
 .support--small{
     padding: 10px 10px;
     background-color: white;
@@ -360,5 +391,3 @@ li.detail--list-item{
     padding-bottom: 40px;
 }
 
-
- 
