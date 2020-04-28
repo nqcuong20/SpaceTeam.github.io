@@ -278,10 +278,7 @@ input.form-control.mr-sm-2 {
     padding: 20px;
     border-radius: 10px;
 }
-.blog h3{
-    font-family: roboto light;
-    font-size: 30px;
-}
+
 
 /* DANH MỤC SẢN PHẨM */
 ul.detail--ul{
@@ -347,11 +344,21 @@ li.detail--list-item{
  }
  
  /* LIÊN HỆ_PHAN MAIN */
-.col-9.bg_lienhe{
+.col-9.bg_lienhe, .bg_introduce{
     background-color: white;
     border-radius: 10px;
 }
 
- 
+
+
+/* GIOITHIEU */
+.introduce h3, .lienhe h3, .blog h3{
+    font-family: roboto light;
+    font-size: 30px;
+}
+.introduce{
+    padding-bottom: 40px;
+}
+
 
  
