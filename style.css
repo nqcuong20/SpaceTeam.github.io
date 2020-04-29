@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -448,3 +449,28 @@ li.detail--list-item{
     padding-bottom: 40px;
 }
 
+
+/* CHI TIẾT SẢN PHẨM */
+.product_chitiet {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.product_chitiet--content .price{
+    font-size: 25px;
+    color: red;
+    font-weight: 400;
+}
+.product_chitiet .promotion_price{
+    color: grey;
+}
+.product_mota--content {
+    background-color: white;
+    border-radius: 5px;
+    
+   
+}
+
+
+ 
