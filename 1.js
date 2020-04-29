@@ -1,13 +1,13 @@
 $(document).ready(function () {
     // Code sẽ viết ở đây
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 300) {
           $('.back-to-top').fadeIn('slow');
         } 
         else {
           $('.back-to-top').fadeOut('slow');
         }
-      });//hàm này là nó cho cái đó nó khi hạ dưới 100px thì hiển thị
+      });
     
       $('.back-to-top').click(function() {
         
@@ -18,6 +18,31 @@ $(document).ready(function () {
         }, 1500, 'easeInOutExpo');
         return false;
       });
+// SẢN PHẨM NỔI BẬT
+$(document).ready(function() {
 
+  $(".owl-carousel").owlCarousel({
+  
+  autoPlay: 3000,
+  items : 4,
+  itemsDesktop : [1199,3],
+  itemsDesktopSmall : [979,3],
+  center: true,
+  nav:true,
+  loop:true,
+  responsive: {
+  600: {
+  items: 4
+  }
+  }
+  
+  
+  
+  
+  
+  
+  });
+  
+  });
       
 });
