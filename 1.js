@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // Code sẽ viết ở đây
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 400) {
           $('.back-to-top').fadeIn('slow');
         } 
         else {

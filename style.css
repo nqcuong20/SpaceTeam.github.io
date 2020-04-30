@@ -22,12 +22,13 @@ section.big{
 }
 .bg--color{
     background-color: #D9263C !important;
-    height: 50px;
+    
     
 }
 a.nav-link {
     color: white !important;
 }
+/* TOP HEADER 2 */
 .bg--color2{
     background-color: #F12A43 !important;
 }
@@ -478,6 +479,33 @@ li.detail--list-item{
 }
 .news .card.mx-2:hover{
     border: 1px solid grey;
+}
+
+/* RESPONSIVE */
+/* RESPONSIVE TRANGCHU */
+@media (max-width: 576px)
+{
+    *{}
+}
+
+/* THONGTINKHACHHANG */
+table tr.cart-item td{
+    padding: 15px 0px;
+    border-bottom: 1px solid #ddd;
+    display: table-cell;
+    vertical-align: middle;
+}
+table tr.order-total {
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-family: 'Roboto Medium';
+    font-weight: normal;
+}
+table tr:first-child td{
+    /* font-family: roboto_medium; */
+}
+.tr{
+    font-family: roboto_medium;
 }
 
 
