@@ -579,3 +579,65 @@ table tr:first-child td{
 }
 
 /* account-user */
+.layout-account-user{
+    background-color: #f7f7f7;
+}
+.body-content{
+    margin: 20px 0;
+}
+.link-list .nav .nav-item .colo-text{
+    color: black;
+    text-decoration: none;
+}
+.link-list .nav .nav-item .colo-text:hover{
+    color: rgb(0, 195, 255);
+}
+.link-list .nav .nav-item .khoang-cach{
+    margin-left: 7px;
+}
+.main-setting{
+    margin-top: 15px;
+}
+
+.sidebar-user{
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.content-main-account{
+    background-color: white;
+    padding: 15px;
+}
+.list-side{
+    width: 200px;
+}
+.list-gr{
+    border-bottom: 1px solid rgb(151, 151, 151) ;
+    padding-bottom: 10px;
+    font-size: 18px;
+    padding-top: 10px;
+    transition: 0.3s background-color;
+}
+.list-side .list-gr:hover{
+    background-color: rgb(219, 219, 219);
+}
+.nav .list-1{
+    text-decoration: none;
+    color: black;
+}
+
+.list-gr .list-1 .icon-right{
+    margin-left: 35px;
+}
+.list-gr .list-1 .icon-right1{
+    margin-left: 96px;
+}
+.form-profile{
+    width: 480px;
+}
+.form-profile .table input{
+    border: 0.5px solid rgb(138, 138, 138);
+    border-radius: 7px;
+    height: 45px;
+    width: 300px;
+}
