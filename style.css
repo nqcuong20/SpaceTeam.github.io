@@ -305,7 +305,7 @@ body {
     margin-left: ;
 } */
 .support--small{
-    
+    height: 165px;
     background-color: white;
     border: 1px solid rgb(190, 185, 185) ;
 }
@@ -321,6 +321,7 @@ body {
      
  }
  .card--small{
+     /* height: 324px; */
      transition: 0.4s;
  }
  .card--small:hover{
@@ -419,13 +420,13 @@ li.detail--list-item{
  .card--small .price_km{
      color: #D9263C;
      font-family: roboto;
-     font-size: 15px;
+     font-size: 13.5px;
      
  }
  .card--small span del{
      font-family: roboto light;
      color: gray;
-     font-size: 15px;
+     font-size: 13.5px;
  }
  
  .card--small .card-title{
@@ -520,6 +521,7 @@ li.detail--list-item{
 }
 
 .support {
+    /* height: 200px; */
     position: relative;
     left: 51px;
 }
