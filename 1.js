@@ -70,6 +70,9 @@ $(document).ready(function() {
       });
 
     // button  TĂNG GIẢM GIÁ TRị
+    // FIX COL-9 --> COL 12
     
     
 });
+
+

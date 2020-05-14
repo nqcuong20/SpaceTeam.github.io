@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+
+
 /* FONT */
 @font-face {
     src: url("font/font/Roboto-Light.ttf");
@@ -334,10 +336,10 @@ body {
  .col-9 .col-3{
      padding: 5px;
  }
- .card--small .btn{
+ /* .card--small .btn{
      margin-top: 10px;
-     width: 180px;
- }
+     width: 160px;
+ } */
  .card--small .price_km{
      color: #D9263C;
      font-family: roboto;
@@ -410,18 +412,20 @@ li.detail--list-item{
  .col-9 .col-3{
      padding: 5px;
  }
- .card--small .btn{
+ /* .card--small .btn{
      margin-top: 10px;
-     width: 180px;
- }
+     width: 160px;
+ } */
  .card--small .price_km{
      color: #D9263C;
      font-family: roboto;
+     font-size: 15px;
      
  }
  .card--small span del{
      font-family: roboto light;
      color: gray;
+     font-size: 15px;
  }
  
  .card--small .card-title{
@@ -486,6 +490,49 @@ li.detail--list-item{
 @media (max-width: 576px)
 {
     *{}
+
+.product_dell .col-sm-3 ,.product_asus .col-sm-3 ,.product_hp .col-sm-3, .product_macbook .col-sm-3{
+    margin-top: 24px;
+}
+
+.product_dell.mt-5, .product_asus.mt-5,.product_hp.mt-5, .product_macbook.mt-5   {
+    position: relative;
+    left: 50px;
+}
+
+.col-3.cottrai {
+    display: none;
+}
+
+.news.mt-5 {
+    position: relative;
+    left: 50px;
+    text-align: center;
+}
+
+.product_noibat.mt-5 {
+    position: relative;
+    left: 50px;
+}
+
+.support .col-sm-3 {
+    margin-bottom: 25px;
+}
+
+.support {
+    position: relative;
+    left: 51px;
+}
+
+
+
+div#carouselId {
+    display: none;
+}
+
+.top_header2 .row {
+    display: none;
+}
 }
 
 /* THONGTINKHACHHANG */
@@ -501,9 +548,10 @@ table tr.order-total {
     font-family: 'Roboto Medium';
     font-weight: normal;
 }
-table tr:first-child td{
-    /* font-family: roboto_medium; */
+.col-sm-3.text-center.mt-3 {
+    padding: 5px;
 }
+
 .tr{
     font-family: roboto_medium;
 }
@@ -616,7 +664,7 @@ table tr:first-child td{
     padding-bottom: 10px;
     font-size: 18px;
     padding-top: 10px;
-    transition: 0.3s background-color;
+    transition: 0.3s ;
 }
 .list-side .list-gr:hover{
     background-color: rgb(219, 219, 219);
@@ -641,3 +689,126 @@ table tr:first-child td{
     height: 45px;
     width: 300px;
 }
+i.fas.fa-bars {
+    opacity: 0;
+}
+@media (max-width: 1023px) and (min-width: 768px )
+{ 
+    *{}
+    i.fas.fa-bars {
+        opacity: 1;
+    }
+.col-3.cottrai {
+    display: none;
+}
+
+input.form-control.mr-sm-2 {
+    width: 300px !important;
+}
+.col-9.m-auto.mx-0{
+    max-width: 100% !important; 
+}
+input.form-control.mr-sm-2{
+    width: 200px !important;
+}
+.btn.btn-dark.my-2.my-sm-0.mr-4.btn--timkiem{
+    width: 80px !important;
+    font-size: 12px;
+}
+.tuvan{
+    display: none;
+}
+.blog_respon{
+    display: none;
+    max-width: 0% !important;
+}
+
+.col-9.bg_introduce{
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+}
+.col-9.bg_introduce img{
+    width: 700px !important;
+}
+
+.col-sm-9.chitiet, .danhsachsanpham, .bg_lienhe, .blog_width{
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+}
+.col-4{
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+}
+i.fas.fa-bars {
+    opacity: 1;
+    position: relative;
+    left: 55px;
+
+}
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+    *{}
+    .tuvan{
+        display: none;
+        
+    }
+    
+    .top_header2.col-sm4.icon.fas.fa-shopping-cart{
+        position: relative;
+        left: 50px !important;
+    }
+    .col-3.cottrai {
+        display: none;
+        max-width: 0% !important;
+    }
+    input.form-control.mr-sm-2 {
+        width: 300px !important;
+    }
+    .col-9.m-auto.mx-0{
+        max-width: 100% !important; 
+    }
+    input.form-control.mr-sm-2{
+        width: 200px !important;
+    }
+    .btn.btn-dark.my-2.my-sm-0.mr-4.btn--timkiem{
+        width: 80px !important;
+        font-size: 12px;
+    }
+    
+    .blog_respon{
+        display: none;
+        max-width: 0% !important;
+    }
+    
+    .col-9.bg_introduce{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .col-9.bg_introduce img{
+        width: 930px !important;
+    }
+    
+    .col-sm-9.chitiet, .danhsachsanpham, .bg_lienhe, .blog_width{
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .col-4{
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+    i.fas.fa-bars {
+        opacity: 1;
+        position: relative;
+        left: 55px;
+
+    }
+    
+
+}
+
+.col-sm-8.product {
+    padding: 0px;
+    margin-top: 0px;
+
+}
+
