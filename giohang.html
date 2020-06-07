@@ -84,15 +84,15 @@
             </div>
             </div>
             <div class="col-3">
-               <div class="row">
-                   <div class="col-sm-8 fix">
+               <div class="row ">
+                   <div class="col-sm-8 fix fixrespon tuvan">
                     <i class="fas fa-phone-volume"></i>
                        <span>Tư vấn</span>
                         <span>0377.077.630</span>
                    </div>
                    <div class="col-sm-4 icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <i class="fas fa-bars"></i>
+                    <a href="giohang.html"><i class="fas fa-shopping-cart"></i></a> 
+                    <i class="fas fa-bars nutmora"></i>
                    </div>
                </div>
                 
@@ -101,89 +101,56 @@
         </div>
         </nav>
     </header> 
-
-
-    
     <!-- HẾT PHẦN HEADER -->
-    <div class="main">
-        <div class="container">
-            <div class="row my-5">
-                <div class="col-6 ">
-                    <h3>THÔNG TIN KHÁCH HÀNH</h3>
-                    <hr class="">
-                    <div class="form--thongtin">
-                        <form>
-                            <div class="form-row">
-                              <div class="form-group col-md-6">
-                                <label for="inputMaKH">Mã Khách Hàng</label>
-                                <input type="text" class="form-control" id="inputMaKH">
-                              </div>
-                              <div class="form-group col-md-6">
-                                <label for="inputHovaTen">Họ Tên</label>
-                                <input type="text" class="form-control" id="inputHovaTen">
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-group col-md-6">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail">
-                              </div>
-                              <div class="form-group col-md-6">
-                                <label for="inputNumberPhone">Số Điện Thoại</label>
-                                <input type="tel" class="form-control" id="inputPassword4">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputAddress">Địa chỉ</label>
-                              <input type="text" class="form-control" id="inputAddress" placeholder="">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Ghi Chú</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                              </div>
-                          </form>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <h3>THÔNG TIN ĐƠN HÀNG</h3>
-                    <hr>
-                    <table>
-                        <tr class="tr">
-                            <td>SẢN PHẨM</td>
-                            <td>TỔNG </td>
-                           
-                        </tr>
+
+    <!--PHẦN MAIN-->
+    <div class="mt-3 col-11">
+        <center>
+            <table class=" table table-hover" >
+                <thead>
+                <tr class="table-active">
+                    <th scope="col">MÃ SẢN PHẨM</th>
+                    <th scope="col">ẢNH SẢN PHẨM</th>
+                    <th scope="col">TÊN SẢN PHẨM</th>
+                    <th scope="col">GÍA SẢN PHẨM</th>
+                    <th scope="col">SỐ LƯỢNG</th>
+                    <th scope="col">THÀNH TIỀN</th>
+                </tr>
+                </thead>
                     <tbody>
-                        <tr class="cart-item clearfix">
-                            <td class="product-name">Asus ROG Zephyrus G GA502DU-AL024T AMD R7-3750H/ GTX 1660Ti 6GB<strong class="product-quantity">x 1</strong></td>
-                            <td class="product-total ">30,709,000 đ</td>
-                        </tr>
+                    <tr>
+                        <th scope="row">35</th>
+                        <td><img src="public/images/ka.jpg" width="90px" height="90px"> </td>
+                        
+                        <td>Dell Inspiron 3543 (N3543A) /Intel Core i3-5005U/4GB/Intel HD Graphics</td>
+                        <td>9,000,000 đ</td>
+                        <td ><input class="form-control text-center w-50 " value="1" type="number"></td>
+                        <td>9,000,000 đ 
+                        
+                       
+                        <p onclick="return confirmAction_delete_cart()" title="Xóa sản phẩm" class="del-product"><i class="far fa-trash-alt "></i></p>
+                        </td>
+                    </tr>
                     </tbody>
-                    <tfoot>
-                        <tr class="order-total">
-                            <td>Tổng đơn hàng:</td>
-                            <td><strong class="total-price">30,709,000 đ</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="btn btn-primary float-right mt-5">ĐẶT HÀNG</div>
-
-                </div>
-            </div>
+            </table>
+        </center>
+        <p class="mt-3 gia" align="right"><b>TỔNG GIÁ:</b> <b class="tien">9,000,000 đ  </b></p>
+        <br>
+        <div class="clearfix">
+        <a href="thanhtoan.html"><button class="mt-3 btn btn-primary dn text-white " > THANH TOÁN </button></a><br>
         </div>
-    </div>
+         <a href="index.html"><button class="mt-3 btn btn-primary mua text-white  " type="button" >Mua tiếp</button> </a><br>
+       
+       <button class="mt-3 btn btn-primary xoa text-white  " type="reset" >Xóa giỏ hàng</button><br> 
+      
     
+       
+    </div>
 
 
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
 
     <!-- BEGIN FOOTER -->
     <footer class="py-5 bg--footer text-white">
