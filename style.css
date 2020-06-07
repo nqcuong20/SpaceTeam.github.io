@@ -697,6 +697,7 @@ i.fas.fa-bars {
 @media (max-width: 1023px) and (min-width: 768px )
 { 
     *{}
+    
     i.fas.fa-bars {
         visibility: visible;
     }
@@ -750,9 +751,15 @@ i.fas.fa-bars {
     left: 55px;
 
 }
+.main-content-login img{
+    display: none;
+}
 }
 @media (max-width: 1280px) and (min-width: 1024px) {
     *{}
+    .main-content-login img{
+        visibility: hidden;
+    }
     .tuvan{
         visibility: hidden;
         
@@ -810,9 +817,7 @@ i.fas.fa-bars {
         left: 55px;
 
     }
-    .main-content-login img{
-        display: none;
-    }
+    
     
 
 }
@@ -824,6 +829,3 @@ i.fas.fa-bars {
 }
 
 /* RESPON PUSH MENU*/
-.main-content-login img{
-    display: none;
-}
