@@ -1,3 +1,23 @@
+<?php
+
+session_start();
+ob_start();
+
+//if (isset($_COOKIE['is_login'])) { // ktra dữ liệu
+//    echo "{$_COOKIE['user_login']}"; // lấy ra cookie
+////    echo "Cookie:{$_COOKIE['user_login']}"; // lấy ra cookie
+//}
+
+
+require 'db/connect.php';
+require 'db/config.php';
+require 'db/database.php';
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +35,6 @@
 </head>
 <body>
     
-    
-
 
 
     <header class="top_header">
