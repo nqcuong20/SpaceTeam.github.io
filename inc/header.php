@@ -87,9 +87,6 @@
                                         <a href="?mod=users&act=register" title="" id="reg">Đăng ký</a>
                                     </div>
                                 </div>
-                                <?php
-                            }
-                            ?>
                         </div>
                     </div>
                     <div id="head-body" class="clearfix">
