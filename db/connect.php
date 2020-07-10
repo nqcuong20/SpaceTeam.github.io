@@ -7,5 +7,5 @@ if (!$conn) {
     die();
 // } else {
 //    echo "Kết nối thành công";
-}
+// }
 ?>

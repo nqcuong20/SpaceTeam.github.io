@@ -1,4 +1,4 @@
 <?php
 
-$config['base_url'] = "http://localhost/Space-Team/";
+$config['base_url'] = "http://localhost/SpaceTeam.github.io/";
 
