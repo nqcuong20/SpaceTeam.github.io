@@ -35,7 +35,7 @@ $start = ($page - 1) * $num_per_page;
                 </ul>
             </div>
         </div>
-        
+        <?php get_sidebar_product_blog(); ?>
         <div class="main-content fl-right">
             <div class="section" id="list-blog-wp">
                 <div class="section-head clearfix">
@@ -76,7 +76,7 @@ $start = ($page - 1) * $num_per_page;
             <div class="section" id="paging-wp">
                 <div class="section-detail">
                     <?php
-                    echo $num_page, $page, "?mod=post&act=blog";
+                    echo get_pagging($num_page, $page, "?mod=post&act=blog");
                     ?>
                 </div>
             </div>
