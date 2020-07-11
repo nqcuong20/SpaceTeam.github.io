@@ -21,12 +21,14 @@ $info_cat_lenovo = get_info_cat(5);
 $info_cat_msi = get_info_cat(6);
 $info_cat_acer = get_info_cat(7);
 
-
+$product_highlights = get_product_highlights();
+$list_slider = get_list_slider();
+$list_post = get_post();
 //show_array($list_slider);
 ?>
 <div id="main-content-wp" class="home-page clearfix">
     <div class="wp-inner">
-        
+        <?php get_sidebar_product(); ?>
         <div class="main-content fl-right">
             <div class="section" id="slider-wp">
                 <div class="section-detail">
