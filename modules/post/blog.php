@@ -18,7 +18,7 @@ $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);
 $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 $start = ($page - 1) * $num_per_page;
-
+$list_post = get_page($start, $num_per_page);
 ?>
 
 <div id="main-content-wp" class="clearfix blog-page">
