@@ -22,7 +22,16 @@ if ($num_rows > 0 && $keyword != "") {
     }
 }
 ?>
-
+<?php
+// phân trang
+$number_rows = db_num_rows("select *,product.created_at from product, category where product.cat_id = category.cat_id and category.status = 1 and product.status = 1 and product_name like N'%{$keyword}%'");
+$num_per_page = 12;
+$total_row = $number_rows;
+$num_page = ceil($total_row / $num_per_page);
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$start = ($page - 1) * $num_per_page;
+$list_search = get_search_product($start, $num_per_page, $keyword);
+?>
 
 <div id="main-content-wp" class="clearfix category-product-page">
     <div class="wp-inner">
