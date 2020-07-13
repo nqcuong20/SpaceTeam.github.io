@@ -19,4 +19,4 @@ function get_list_price_on_25m($cat_id){
     $result = db_fetch_array("SELECT * FROM `product` WHERE cat_id = $cat_id and status = 1 and `price_new`> 25000000");
     return $result;
 }
-??
+?>
