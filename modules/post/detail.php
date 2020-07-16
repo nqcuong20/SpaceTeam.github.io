@@ -84,7 +84,8 @@ if ($num_rows > 0) {
                         <div class="g-plusone" data-size="medium"></div>
                     </div>
                     <div class="fb-comments" id="fb-comment" data-href="" data-numposts="5"></div>
-                    <div class="fb-comments" data-href="http://localhost:9000/laravel_it_viec/ismart/" data-width="100%" data-numposts="5"></div>
+                    <div class="fb-comments" data-href="http://ducht.000webhostapp.com/" data-width="100%" data-numposts="5"></div>
+                    <!-- edit data-href here -->
                 </div>
             </div>
         </div>
