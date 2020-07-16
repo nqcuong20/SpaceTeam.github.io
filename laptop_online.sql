@@ -8,6 +8,7 @@
 -- PHP Version: 7.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0; -- edit here
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,17 +30,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `fullname` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `username` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `phone` char(15) COLLATE utf8_vietnamese_ci NOT NULL,
-  `gender` enum('male','female') COLLATE utf8_vietnamese_ci NOT NULL,
-  `avatar` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `fullname` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `phone` char(15) NOT NULL,
+  `gender` enum('male','female') NOT NULL,
+  `avatar` varchar(100) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 1,
   `role` int(11) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)
 
 -- --------------------------------------------------------
 
@@ -50,14 +51,14 @@ CREATE TABLE `admin` (
 CREATE TABLE `bill` (
   `bill_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `fullname` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `phone` char(11) COLLATE utf8_vietnamese_ci NOT NULL,
-  `note` text COLLATE utf8_vietnamese_ci NOT NULL,
+  `fullname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `phone` char(11) NOT NULL,
+  `note` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 1,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)
 
 --
 -- Dumping data for table `bill`
@@ -76,14 +77,14 @@ CREATE TABLE `bill_detail` (
   `id` int(11) NOT NULL,
   `bill_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_thumb` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `product_name` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `product_thumb` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
   `price_new` int(50) NOT NULL,
   `qty` int(11) NOT NULL,
-  `sub_total` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `sub_total` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL,
   `status` tinyint(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)
 
 -- --------------------------------------------------------
 
@@ -93,11 +94,11 @@ CREATE TABLE `bill_detail` (
 
 CREATE TABLE `category` (
   `cat_id` int(11) NOT NULL,
-  `cat_name` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
+  `cat_name` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)
 
 --
 -- Dumping data for table `category`
@@ -121,12 +122,12 @@ INSERT INTO `category` (`cat_id`, `cat_name`, `created_at`, `updated_at`, `statu
 
 CREATE TABLE `page` (
   `id` int(11) NOT NULL,
-  `page_title` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
+  `page_title` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `page_content` text COLLATE utf8_vietnamese_ci NOT NULL,
+  `page_content` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)-- ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `page`
@@ -146,15 +147,15 @@ INSERT INTO `page` (`id`, `page_title`, `created_at`, `updated_at`, `page_conten
 CREATE TABLE `post` (
   `id` int(11) NOT NULL,
   `cat_id` int(11) NOT NULL,
-  `post_title` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `images` varchar(256) COLLATE utf8_vietnamese_ci NOT NULL,
+  `post_title` varchar(100) NOT NULL,
+  `images` varchar(256) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp(),
-  `post_desc` text COLLATE utf8_vietnamese_ci NOT NULL,
-  `post_content` text COLLATE utf8_vietnamese_ci NOT NULL,
-  `featured_posts` enum('Bình thường','Nổi bật') COLLATE utf8_vietnamese_ci NOT NULL,
+  `post_desc` text NOT NULL,
+  `post_content` text NOT NULL,
+  `featured_posts` enum('Bình thường','Nổi bật') NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)-- ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 -- --------------------------------------------------------
 
@@ -164,11 +165,11 @@ CREATE TABLE `post` (
 
 CREATE TABLE `post_cat` (
   `cat_id` int(11) NOT NULL,
-  `post_name` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `post_name` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+) --ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `post_cat`
@@ -188,25 +189,25 @@ INSERT INTO `post_cat` (`cat_id`, `post_name`, `created_at`, `updated_at`, `stat
 
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
-  `product_name` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `product_name` varchar(100) NOT NULL,
   `price_new` int(50) NOT NULL,
   `price_old` int(50) NOT NULL,
   `qty_product` int(11) NOT NULL DEFAULT 30,
-  `product_desc` text COLLATE utf8_vietnamese_ci NOT NULL,
-  `product_thumb` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_1` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_2` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_3` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_4` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_5` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `list_thumb_6` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `product_content` text COLLATE utf8_vietnamese_ci NOT NULL,
+  `product_desc` text NOT NULL,
+  `product_thumb` varchar(100) NOT NULL,
+  `list_thumb_1` varchar(100) NOT NULL,
+  `list_thumb_2` varchar(100) NOT NULL,
+  `list_thumb_3` varchar(100) NOT NULL,
+  `list_thumb_4` varchar(100) NOT NULL,
+  `list_thumb_5` varchar(100) NOT NULL,
+  `list_thumb_6` varchar(100) NOT NULL,
+  `product_content` text NOT NULL,
   `cat_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `selling_products` enum('Bình thường','Bán chạy') COLLATE utf8_vietnamese_ci NOT NULL,
-  `featured_products` enum('Bình thường','Nổi bật') COLLATE utf8_vietnamese_ci NOT NULL DEFAULT 'Bình thường',
+  `selling_products` enum('Bình thường','Bán chạy') NOT NULL,
+  `featured_products` enum('Bình thường','Nổi bật') NOT NULL DEFAULT 'Bình thường',
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+)-- ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `product`
