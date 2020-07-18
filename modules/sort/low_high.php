@@ -8,7 +8,7 @@ $list_product = get_lowhigh();
 
 <?php
 $id = (int) $_GET['id'];
-$sql = "SELECT * FROM `category` WHERE `cat_id` = '{$id}' and status = 1";
+$sql = "SELECT * FROM category WHERE cat_id = '{$id}' and status = 1";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -90,12 +90,7 @@ $default_sorting = get_default_sorting();
                                         $(document).ready(function () {
                                             $(".city").change(function () {
                                                 var id = $(".city").val();
-                                                if (id == 1) {
-                                                    location.replace('?mod=sort&act=A-Z&id=<?php echo $id; ?>');
-                                                } else if (id == 2)
-                                                {
-                                                    location.replace('?mod=sort&act=Z-A&id=<?php echo $id; ?>');
-                                                } else if (id == 3)
+                                                 if (id == 3)
                                                 {
                                                     location.replace('?mod=sort&act=high_low&id=<?php echo $id; ?>');
                                                 } else if (id == 4)

@@ -54,7 +54,7 @@ if (isset($_POST['btn_add'])) {
 // Bước 3: Kết luận 
     if (empty($error)) {
         if (!check_post_exists($post_title)) {
-            $sql = "INSERT INTO `post` (`post_title`,`cat_id`,`images`,`post_desc`,`post_content`,`featured_posts`)"
+            $sql = "INSERT INTO post (post_title,cat_id,images,post_desc,post_content,featured_posts)"
                     . "VALUES('{$post_title}','{$cat_id}','{$images}', '{$post_desc}', '{$post_content}', '{$featured_posts}')";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Thêm mới thành công";
@@ -101,7 +101,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=post&act=upload_single">
-                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
+                            
                             <div id="show_list_file" >
                             </div>
                             <?php

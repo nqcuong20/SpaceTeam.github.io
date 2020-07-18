@@ -3,7 +3,7 @@ get_header();
 ?>
 <?php
 $id = (int) $_GET['id'];
-$sql = "select * from `admin` where `id` = $id";
+$sql = "select * from admin where id = $id";
 $result = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($result);
 //show_array($item);
@@ -48,7 +48,7 @@ if (isset($_POST['btn_change_pass'])) {
         $result = mysqli_query($conn, $sql_change_pass);
         $num_rows = mysqli_num_rows($result);
         if ($num_rows > 0) {
-            $sql = mysqli_query($conn, "update `admin` set `password`='{$pass_new}' where `id`='{$id}'");
+            $sql = mysqli_query($conn, "update admin set password='{$pass_new}' where id='{$id}'");
             $_SESSION['success'] = "Thay đổi mật khẩu thành công";
             redirect_to("?mod=product&act=main");
         } else {

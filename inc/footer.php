@@ -1,9 +1,9 @@
-<div id="footer-wp">
+<div id="footer-wp" style=" background: #f12a43; color: white;">
     <div id="foot-body">
         <div class="wp-inner clearfix">
             <div class="block" id="info-company">
-                <h3 class="title">Space Team</h3>
-                <p class="desc">Space Team luôn cung cấp luôn là sản phẩm chính hãng có thông tin rõ ràng, chính sách ưu đãi cực lớn cho khách hàng có thẻ thành viên.</p>
+                <h3 class="title" style="color: white;">SPACE TEAM</h3>
+                <p class="desc" style="color: white;">SPACE TEAM luôn cung cấp luôn là sản phẩm chính hãng có thông tin rõ ràng, chính sách ưu đãi cực lớn cho khách hàng có thẻ thành viên.</p>
                 <div id="payment">
                     <div class="thumb">
                         <img src="public/images/img-foot.png" alt="">
@@ -11,53 +11,48 @@
                 </div>
             </div>
             <div class="block menu-ft" id="info-shop">
-                <h3 class="title">Thông tin cửa hàng</h3>
+                <h3 class="title" style="color: white;">Thông tin cửa hàng</h3>
                 <ul class="list-item">
                     <li>
-                        <p>351 Lạc Long Quân Phường 5 Quận 11</p>
+                        <p style="color: white;">351A - Lạc Long Quân Phường 5 Quận 11</p>
                     </li>
                     <li>
-                        <p>0377 077 630</p>
+                        <p style="color: white;">0377077630-092361253</p>
                     </li>
                     <li>
-                        <p>spaceteam.hcmue@gmail.com</p>
+                        <p style="color: white;">spaceteam.hcmue@gmail.com</p>
                     </li>
                 </ul>
             </div>
             <div class="block menu-ft policy" id="info-shop">
-                <h3 class="title">Chính sách mua hàng</h3>
+                <h3 class="title" style="color: white;">Chính sách mua hàng</h3>
                 <ul class="list-item">
                     <li>
-                        <a href="" title="">Quy định - chính sách</a>
+                        <a href="" title="" style="color: white;">Quy định - chính sách</a>
                     </li>
                     <li>
-                        <a href="" title="">Chính sách bảo hành - đổi trả</a>
+                        <a href="" title="" style="color: white;">Chính sách bảo hành - đổi trả</a>
                     </li>
                     <li>
-                        <a href="" title="">Chính sách hội viện</a>
+                        <a href="" title="" style="color: white;">Chính sách hội viện</a>
                     </li>
                     <li>
-                        <a href="" title="">Giao hàng - lắp đặt</a>
+                        <a href="" title="" style="color: white;">Giao hàng - lắp đặt</a>
                     </li>
                 </ul>
             </div>
-            <div class="block" id="newfeed">
-                <h3 class="title">Bảng tin</h3>
-                <p class="desc">Đăng ký với chung tôi để nhận được thông tin ưu đãi sớm nhất</p>
-                <div id="form-reg">
-                </div>
-            </div>
+            
         </div>
     </div>
     <div id="foot-bot">
         <div class="wp-inner">
-            <p id="copyright">© Space Team HCMUE</p>
+            <p id="copyright" style="color: white;">© SPACE TEAM | Trường Đại Học Sư Phạm TP.Hồ Chí Minh</p>
         </div>
     </div>
 </div>
 </div>
 <div id="menu-respon">
-    <a href="?page=home" title="" class="logo">Space Team</a>
+    <a href="?page=home" title="" class="logo">SPACE TEAM</a>
     <div id="menu-respon-wp">
         <div id="main-menu-wp">
             <ul class="" id="main-menu-respon">

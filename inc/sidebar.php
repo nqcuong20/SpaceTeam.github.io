@@ -1,7 +1,7 @@
 <?php
 require 'db/connect.php';
 $id = (int) $_GET['id'];
-$sql = "SELECT * FROM `category` WHERE `cat_id` = '{$id}'";
+$sql = "SELECT * FROM category WHERE cat_id = '{$id}'";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -12,7 +12,7 @@ if ($num_rows > 0) {
 //show_array($list_cat);
 ?>
 <?php
-$sql = "SELECT * FROM `category` where status = 1";
+$sql = "SELECT * FROM category where status = 1";
 $result = mysqli_query($conn, $sql);
 $list_category = array();
 $num_rows = mysqli_num_rows($result);

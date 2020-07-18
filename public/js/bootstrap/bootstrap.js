@@ -610,7 +610,7 @@ if (typeof jQuery === 'undefined') {
         this.inState = {click: false, hover: false, focus: false}
 
         if (this.$element[0] instanceof document.constructor && !this.options.selector) {
-            throw new Error('`selector` option must be specified when initializing ' + this.type + ' on the window.document object!')
+            throw new Error('selector option must be specified when initializing ' + this.type + ' on the window.document object!')
         }
 
         var triggers = this.options.trigger.split(' ')
@@ -1000,7 +1000,7 @@ if (typeof jQuery === 'undefined') {
         if (!this.$tip) {
             this.$tip = $(this.options.template)
             if (this.$tip.length != 1) {
-                throw new Error(this.type + ' `template` option must consist of exactly 1 top-level element!')
+                throw new Error(this.type + ' template option must consist of exactly 1 top-level element!')
             }
         }
         return this.$tip

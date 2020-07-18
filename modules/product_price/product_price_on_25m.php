@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <?php
-$sql = "SELECT * FROM `category`";
+$sql = "SELECT * FROM category";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -51,7 +51,7 @@ $list_product = get_list_price_on_25m($id);
             <div class="section" id="list-product-wp">
                 <div class="section-head clearfix">
                     <div class="section-head clearfix">
-                        <h3 class="section-title fl-left">Những sản phẩm giá trên 25.000.000Đ</h3>
+                        
                         <div class="filter-wp fl-right">
                             <p class="desc">Hiển thị <?php echo count($list_product); ?> sản phẩm</p>
                         </div>

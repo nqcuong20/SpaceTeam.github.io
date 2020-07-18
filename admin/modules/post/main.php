@@ -3,7 +3,7 @@ get_header();
 ?>
 <?php
 // Xuất dữ liệu
-$sql = "SELECT *,post.id,post.status FROM `post`,`post_cat` where post.cat_id = post_cat.cat_id and post.status != 2";
+$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2";
 $result = mysqli_query($conn, $sql);
 $list_post = array();
 $num_rows = mysqli_num_rows($result);
@@ -139,19 +139,7 @@ unset($post);
                                     ?>
                                 </tbody>
 
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Hình ảnh</span></td>
-                                        <td><span class="thead-text">Tiêu đề</span></td>
-                                        <td><span class="thead-text">Danh mục</span></td>
-                                        <td><span class="thead-text">Mô tả</span></td>
-                                        <td><span class="thead-text">Ngày tạo</span></td>
-                                        <td><span class="thead-text">Ngày cật nhật</span></td>
-                                        <td><span class="thead-text">Bài viết nổi bật</span></td>
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
+                                
                             </table>
                         </div>
                         <?php

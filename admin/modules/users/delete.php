@@ -1,7 +1,7 @@
 <?php
 
 $id = (int) $_GET['id'];
-$sql = "update `users` set status = 0 where user_id = $id";
+$sql = "update users set status = 0 where user_id = $id";
 $list_users = array();
 $result = mysqli_query($conn, $sql);
 $num_rows = mysqli_num_rows($result);

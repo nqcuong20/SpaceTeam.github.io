@@ -35,7 +35,7 @@ if (isset($_POST['btn_update'])) {
 
     // Bước 3: Kết luận
     if (empty($error)) {
-        $sql = "update `bill` set `address`='{$address}',`phone`='{$phone}',`note`='{$note}' where `bill_id`='{$id}'";
+        $sql = "update bill set address='{$address}',phone='{$phone}',note='{$note}' where bill_id='{$id}'";
         if (mysqli_query($conn, $sql)) {
             $_SESSION['success'] = "Cập nhật thành công";
             redirect_to("?mod=bill&act=list_order");

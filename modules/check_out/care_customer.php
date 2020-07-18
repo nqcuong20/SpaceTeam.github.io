@@ -20,12 +20,25 @@ $list_buy = get_list_by_cart();
             </div>
         </div>
     </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="wrapper" class="wp-inner clearfix">
         <p class="cart">Quý khách đã đặt hàng thành công</p>
         <p class="cart">Chúng tôi sẽ liên lạc lại với quý khách trong 24h để kiểm tra đơn hàng</p>
         <p class="cart">Cảm ơn quý khách</p>
         <p class="cart">Chúc quý khách một ngày vui vẻ</p>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
 </div>
 
 <?php

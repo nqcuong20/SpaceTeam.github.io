@@ -2,7 +2,7 @@
 get_header();
 ?>
 <?php
-$sql = "SELECT * FROM `admin` where status != 2";
+$sql = "SELECT * FROM admin where status != 2";
 $result = mysqli_query($conn, $sql);
 $list_admin = array();
 $num_rows = mysqli_num_rows($result);
@@ -147,21 +147,6 @@ unset($admin);
                                     }
                                     ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Tên hiển thị</span></td>
-                                        <td><span class="thead-text">Hình ảnh</span></td>
-                                        <td><span class="thead-text">Tên đăng nhập</span></td>
-                                        <td><span class="thead-text">Đổi mật khẩu</span></td>
-                                        <td><span class="thead-text">Email</span></td>
-                                        <td><span class="thead-text">Địa chỉ</span></td>
-                                        <td><span class="thead-text">Số điện thoại</span></td>
-                                        <td><span class="thead-text">Giới tính</span></td>
-    <!--                                        <td><span class="thead-text">Trạng thái</span></td>-->
-                                        <td><span class="thead-text">Quyền</span></td>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <?php

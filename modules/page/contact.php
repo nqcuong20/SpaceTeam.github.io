@@ -1,9 +1,7 @@
 <?php
 get_header()
 ?>
-<?php
 
-?>
 <div id="main-content-wp" class="clearfix detail-blog-page">
     <div class="wp-inner">
         <div class="secion" id="breadcrumb-wp">
@@ -18,16 +16,17 @@ get_header()
                 </ul>
             </div>
         </div>
-       
+        <?php get_sidebar_product_page(); ?> 
+        
         <div class="main-content fl-right">
             <div class="section" id="detail-blog-wp">
                 <div class="section-head clearfix">
                     <h3 class="section-title">Liên hệ</h3>
                 </div>
                 <div class="section-detail">
-                    <span class="create-date">2020-07-11 11:33:00</span>
+                    <span class="create-date">2020-07-09 11:33:00</span>
                     <div class="detail">
-                        <p>Website thương mại điện tử Space Team</p>
+                        <p>Website thương mại điện tử SPACETEAM</p>
                         <p>Địa chỉ: 351A Lạc Long Quân Phường 5 Quận 11 TP.Hồ Chí Minh</p>
                         <p>Số điện thoại: 0377077630</p>
                         <p>Email: spaceteam.hcmue@gmail.com</p>

@@ -88,7 +88,7 @@ get_header();
                                     <p style="text-align: center;">Tổng hóa đơn</p>
                                     <h1 style="text-align: center; font-size: 50px;">
                                         <?php
-                                        $sql = "select count(*) as tongdonhang from bill where 1";
+                                        $sql = "select count(id) as tongdonhang from bill_detail where 1";
                                         $result = mysqli_query($conn, $sql);
                                         $num_rows = mysqli_num_rows($result);
                                         if ($num_rows > 0) {
@@ -118,7 +118,7 @@ get_header();
                                     <p style="text-align: center;">Tổng tiền hóa đơn</p>
                                     <h1 style="text-align: center">
                                         <?php
-                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM `bill_detail` WHERE 1";
+                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM bill_detail WHERE 1";
                                         $result = mysqli_query($conn, $sql);
                                         $num_rows = mysqli_num_rows($result);
                                         if ($num_rows > 0) {
@@ -180,7 +180,7 @@ get_header();
                                     <p style="text-align: center;">Tổng tiền hóa đơn</p>
                                     <h1 style="text-align: center">
                                         <?php
-                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM `bill_detail` WHERE 1";
+                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM bill_detail WHERE 1";
                                         $result = mysqli_query($conn, $sql);
                                         $num_rows = mysqli_num_rows($result);
                                         if ($num_rows > 0) {
@@ -210,7 +210,7 @@ get_header();
                                     <p style="text-align: center;">Tổng tiền hóa đơn</p>
                                     <h1 style="text-align: center">
                                         <?php
-                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM `bill_detail` WHERE 1";
+                                        $sql = "SELECT SUM(sub_total) as tongdonhang FROM bill_detail WHERE 1";
                                         $result = mysqli_query($conn, $sql);
                                         $num_rows = mysqli_num_rows($result);
                                         if ($num_rows > 0) {

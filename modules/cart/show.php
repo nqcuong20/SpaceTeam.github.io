@@ -117,6 +117,21 @@ $list_buy = get_list_by_cart();
         ?>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 <?php
 get_footer();

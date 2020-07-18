@@ -1,6 +1,6 @@
 <div id="footer-wp">
     <div class="wp-inner">
-        <p id="copyright">2020 Space Team</p>
+        <p id="copyright">2020 © SPACE TEAM</p>
     </div>
 </div>
 </div>

@@ -6,7 +6,7 @@ $cat_id = (int) $_GET['id'];
 $id = (int) $_GET['id'];
 ?>
 <?php
-$sql = "SELECT * FROM `category`,`product` where category.cat_id = product.cat_id and id={$id}";
+$sql = "SELECT * FROM category,product where category.cat_id = product.cat_id and id={$id}";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -26,7 +26,7 @@ $item = get_product_by_id($id);
 $cat_id = (int) $_GET['cat_id'];
 $id = (int) $_GET['id'];
 // Lấy danh sách sản phẩm cùng loại
-$sql = "SELECT *,product.created_at FROM `product` WHERE cat_id = '$cat_id' and product.id<>$id and status = 1";
+$sql = "SELECT *,product.created_at FROM product WHERE cat_id = '$cat_id' and product.id<>$id and status = 1";
 $result = mysqli_query($conn, $sql);
 $product_same_category = array();
 $num_rows = mysqli_num_rows($result);
@@ -37,8 +37,6 @@ if ($num_rows > 0) {
 }
 //show_array($product_same_category);
 ?>
-<div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=650089968889389&autoLogAppEvents=1"></script>
 
 <div id="main-content-wp" class="clearfix detail-product-page">
     <div class="wp-inner">	
@@ -69,7 +67,7 @@ if ($num_rows > 0) {
                 ?>
             </div>
         </div>
-        
+        <?php get_sidebar_product(); ?>
         <div class="main-content fl-right">
             <div class="section" id="detail-product-wp">
                 <div class="section-detail clearfix">
@@ -125,7 +123,7 @@ if ($num_rows > 0) {
                         }
                         ?>
 
-                        <p class="price"><?php echo $item['price_new']; ?> <span class="price_old"><?php echo $item['price_old']; ?></span></p>
+                        <p class="price"><?php echo currency_format($item['price_new']); ?> <span class="price_old"><?php echo currency_format($item['price_old']); ?></span></p>
 
                         <div id="num-order-wp">
                             <button type="submit" title="" id="minus" onclick="updateItem1(<?php echo $item['id'] ?>)"><i class="fa fa-minus"></i></button>
@@ -172,20 +170,10 @@ if ($num_rows > 0) {
                     <p class="product_content"><?php echo $item['product_content']; ?></p>
                 </div>
             </div>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
-                                
-            <div class="comment_facebook">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="comment">
-                                        <div class="fb-comments" data-href="https://nqcuong20.github.io/SpaceTeam.github.io/chitietsanpham.html" data-numposts="5" data-width=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+            <div id="like-fb" class="cleafix">
+                <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flocalhost%3A9000%2FSPACETEAM.com%2FSPACETEAM.com%2F%3Fpage%3Dhome&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="fb-comments" data-href="http://localhost/SPACETEAM.com/SPACETEAM.com/?page=home" data-width="100%" data-numposts="5"></div>
             <div class="section" id="same-category-wp">
                 <div class="section-head">
                     <h3 class="section-title">Sản phẩm cùng loại</h3>
@@ -218,8 +206,8 @@ if ($num_rows > 0) {
                                     </a>
                                     <a href="<?php echo $same['url']; ?>" title="" class="product-name"><?php echo $same['product_name']; ?></a>
                                     <div class="price">
-                                        <span class="new"><?php echo $same['price_new']; ?></span>
-                                        <span class="old"><?php echo $same['price_old']; ?></span>
+                                        <span class="new"><?php echo currency_format($same['price_new']); ?></span>
+                                        <span class="old"><?php echo currency_format($same['price_old']); ?></span>
                                     </div>
                                     <?php
                                     if ($same['qty_product'] > 0) {

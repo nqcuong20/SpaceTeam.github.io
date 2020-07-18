@@ -12,11 +12,7 @@ function check_login($username, $password) {
 //    
 }
 function user_exists($username, $email) {
-<<<<<<< HEAD
     $check_user = db_num_rows("select * from users where username = '{$username}' or email = '{$email}'");
-=======
-    $check_user = db_num_rows("select * from `users` where `username` = '{$username}' or `email` = '{$email}'");
->>>>>>> 92c34adc64cab51be00f7ac34f8e2d58236d0246
     echo $check_user;
     if ($check_user > 0)
         return TRUE;
@@ -42,11 +38,7 @@ function user_login() {
 }
 
 function info_user($field = 'id') { //$field:trường
-<<<<<<< HEAD
     $list_users = db_fetch_array("SELECT * FROM users where status = 1");
-=======
-    $list_users = db_fetch_array("SELECT * FROM `users` where status = 1");
->>>>>>> 92c34adc64cab51be00f7ac34f8e2d58236d0246
     if (isset($_SESSION['is_login'])) { // Nếu tồn tại is_login
         foreach ($list_users as $user) {
             if ($_SESSION['user_login'] == $user['username']) {
@@ -72,40 +64,26 @@ function show_gender($gender) {
 }
 // lấy active_token để ktra xem email có tồn tai hay k
 function active_user($active_token) {
-<<<<<<< HEAD
     return db_update('users', array('is_active' => 1), "active_token='{$active_token}'");
 }
 
 function check_active_token($active_token) {
     $check = db_num_rows("select * from users where active_token = '{$active_token}' and is_active = '0'");
-=======
-    return db_update('users', array('is_active' => 1), "`active_token`='{$active_token}'");
-}
-
-function check_active_token($active_token) {
-    $check = db_num_rows("select * from `users` where `active_token` = '{$active_token}' and `is_active` = '0'");
->>>>>>> 92c34adc64cab51be00f7ac34f8e2d58236d0246
     if ($check > 0)
         return true;
     return false;
 }
 
-<<<<<<< HEAD
-
-function check_email($email) {
-    $check = db_num_rows("select * from users where email = '{$email}'");
-=======
 // ktr email có tồn tai hay k để lấy lai mật khẩu
 function update_reset_token($data, $email) {
-    return db_update('users', $data, "`email`='{$email}'");
+    return db_update('users', $data, "email='{$email}'");
 }
 function update_users($data){
     return db_update('users', $data);
 }
 
 function check_email($email) {
-    $check = db_num_rows("select * from `users` where `email` = '{$email}'");
->>>>>>> 92c34adc64cab51be00f7ac34f8e2d58236d0246
+    $check = db_num_rows("select * from users where email = '{$email}'");
     if ($check > 0)
         return true;
     return false;
@@ -114,17 +92,10 @@ function check_email($email) {
 // ktra mã token để đổi mật khẩu
 
 function update_pass($data , $reset_token){
-<<<<<<< HEAD
     return db_update('users', $data, "reset_token='{$reset_token}'");
 }
 function check_reset_token($reset_token) {
     $check = db_num_rows("select * from users where reset_token = '{$reset_token}'");
-=======
-    return db_update('users', $data, "`reset_token`='{$reset_token}'");
-}
-function check_reset_token($reset_token) {
-    $check = db_num_rows("select * from `users` where `reset_token` = '{$reset_token}'");
->>>>>>> 92c34adc64cab51be00f7ac34f8e2d58236d0246
     if ($check > 0)
         return true;
     return false;

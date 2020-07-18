@@ -127,14 +127,7 @@ unset($cat);
                                     }
                                     ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Tên bài viết</span></td>
-                                        <td><span class="thead-text">Ngày tạo</span></td>
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
+                                
                             </table>
                         </div>
                         <?php

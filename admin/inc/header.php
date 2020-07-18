@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quản lý SPACE TEAM</title>
+        <title>Quản lý SPACETEAM</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="public/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -100,69 +100,7 @@
                 <div id="header-wp">
                     <div class="wp-inner clearfix">
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
-                        <ul id="main-menu" class="fl-left">
-                            <li>
-                                <a href="#" title="">Trang</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="?mod=page&act=add" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="?mod=page&act=main" title="">Danh sách trang</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" title="">Bài viết</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="?mod=post&act=add" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="?mod=post&act=main" title="">Danh sách bài viết</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" title="">Sản phẩm</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="?mod=product&act=add" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="?mod=product&act=main" title="">Danh sách sản phẩm</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" title="">Danh mục</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="?mod=product_cat&act=main" title="">Danh mục sản phẩm</a> 
-                                    </li>
-                                    <li>
-                                        <a href="?mod=post_cat&act=main" title="">Danh mục bài viết</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="">Bán hàng</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="?mod=bill&act=list_order" title="">Danh sách đơn hàng</a> 
-                                    </li>
-<!--                                    <li>
-                                        <a href="?mod=bill&act=bill_status_1" title="">Danh sách đơn hàng đã xử lý</a> 
-                                    </li>-->
-                                    <li>
-                                        <a href="?mod=users&act=main" title="">Danh sách khách hàng</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <!--                            <li>
-                                                            <a href="?page=menu" title="">Menu</a>
-                                                        </li>-->
-                        </ul>
+                        
                             <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                                 <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <div id="thumb-circle" class="fl-left">
@@ -177,3 +115,6 @@
                             </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </body>

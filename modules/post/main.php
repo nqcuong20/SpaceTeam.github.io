@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 
 <?php
 $id = (int) $_GET['id'];
-$sql = "SELECT * FROM `post_cat` WHERE `cat_id` = '{$id}' and status = 1";
+$sql = "SELECT * FROM post_cat WHERE cat_id = '{$id}' and status = 1";
 $result = mysqli_query($conn, $sql);
 $post_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -127,7 +127,7 @@ if (isset($_GET['id'])) {
                     <?php
                     $id = (int) $_GET['id'];
 //                    $id = $item['cat_id'];
-                    echo $num_page, $page, "?mod=post&act=main", $id;
+                    echo get_pagging_category_product($num_page, $page, "?mod=post&act=main", $id);
                     ?>
                 </div>
             </div>

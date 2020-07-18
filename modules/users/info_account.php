@@ -1,4 +1,4 @@
-ac<?php
+<?php
 get_header();
 ?>
 <?php

@@ -63,7 +63,7 @@ function db_insert($table, $data) {
     }
     $values = substr($values, 0, -2);
     db_query("
-            INSERT INTO `{$table}` $fields
+            INSERT INTO {$table} $fields
             VALUES($values)
         ");
     return mysqli_insert_id($conn);
@@ -80,7 +80,7 @@ function db_update($table, $data, $where) {
     }
     $sql = substr($sql, 0, -2);
     db_query("
-            UPDATE `{$table}`
+            UPDATE {$table}
             SET $sql
             WHERE $where
    ");
@@ -89,7 +89,7 @@ function db_update($table, $data, $where) {
 
 function db_delete($table, $where) {
     global $conn;
-    $query_string = "DELETE FROM `{$table}` WHERE $where";
+    $query_string = "DELETE FROM {$table} WHERE $where";
     db_query($query_string);
     return mysqli_affected_rows($conn);
 }

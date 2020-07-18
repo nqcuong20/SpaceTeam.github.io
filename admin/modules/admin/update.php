@@ -8,7 +8,7 @@ $id = (int) $_GET['id'];
 //}
 ?>
 <?php
-$sql = "select * from `admin` where `id` = $id";
+$sql = "select * from admin where id = $id";
 $result = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($result);
 //show_array($item);
@@ -67,7 +67,7 @@ if (isset($_POST['btn_update'])) {
 
     if (empty($error)) {
         if (!empty($_FILES['file']['name'])) {
-            $sql = "update `admin` set `fullname`='{$fullname}',`avatar`='{$avatar}',`gender`='{$gender}',`email`='{$email}',`phone`='{$phone}',`address`='{$address}' where `id`='{$id}'";
+            $sql = "update admin set fullname='{$fullname}',avatar='{$avatar}',gender='{$gender}',email='{$email}',phone='{$phone}',address='{$address}' where id='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=admin&act=info_account");
@@ -75,7 +75,7 @@ if (isset($_POST['btn_update'])) {
                 $_SESSION['error'] = "Cập nhật thất bại";
             }
         } else {
-            $sql = "update `admin` set `fullname`='{$fullname}',`gender`='{$gender}',`email`='{$email}',`phone`='{$phone}',`address`='{$address}' where `id`='{$id}'";
+            $sql = "update admin set fullname='{$fullname}',gender='{$gender}',email='{$email}',phone='{$phone}',address='{$address}' where id='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=admin&act=info_account");
@@ -117,7 +117,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=post&act=upload_single">
-                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
+                            
                             <div id="show_list_file" >
                                 <img src="uploads/<?php echo $item['avatar'] ?> ">
                             </div>

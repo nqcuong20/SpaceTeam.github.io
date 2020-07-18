@@ -29,7 +29,7 @@ if (isset($_POST['btn_add'])) {
 // Bước 3: Kết luận 
     if (empty($error)) {
         if (!check_slider_exists($slider_name)) {
-            $sql = "INSERT INTO `slider` (`slider_name`,`images`,`creator`)"
+            $sql = "INSERT INTO slider (slider_name,images,creator)"
                     . "VALUES('{$slider_name}','{$images}', '{$creator}')";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Thêm mới thành công";
@@ -72,7 +72,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=slider&act=upload_single">
-                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
+                            
                             <div id="show_list_file" >
                             </div>
                             <?php echo form_error('file') ?>

@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
 <?php
 // phân trang
-$number_rows = db_num_rows("SELECT * FROM `post`,`post_cat` where post.cat_id = post_cat.cat_id and post.status = 1 and post_cat.status = 1");
+$number_rows = db_num_rows("SELECT * FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status = 1 and post_cat.status = 1");
 $num_per_page = 8;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);

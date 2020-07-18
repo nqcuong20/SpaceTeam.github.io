@@ -99,7 +99,7 @@ if (isset($_POST['btn_add'])) {
     // Bước 3: Kết luận
     if (empty($error)) {
         if (!check_admin_exists($username,$email)) {
-            $sql = "INSERT INTO `admin` (`fullname`,`avatar`,`username`,`password`,`email`,`phone`,`address`,`gender`,`role`)"
+            $sql = "INSERT INTO admin (fullname,avatar,username,password,email,phone,address,gender,role)"
                     . "VALUES('{$fullname}','{$avatar}', '{$username}', '{$password}', '{$email}','{$phone}','{$address}', '{$gender}', '{$role}')";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Thêm mới thành công";
@@ -143,7 +143,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=admin&act=upload_single">
-                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
+                            
                             <div id="show_list_file" >
                             </div>
                             <?php echo form_error('file') ?>

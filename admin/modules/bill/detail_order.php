@@ -11,7 +11,7 @@ if ($_GET['id']) {
 <?php
 if ($_GET['id']) {
     $id = (int) $_GET['id'];
-    $sql = "SELECT * FROM `bill` where `bill_id` = $id";
+    $sql = "SELECT * FROM bill where bill_id = $id";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
     if ($num_rows > 0) {
@@ -123,7 +123,7 @@ if ($_GET['id']) {
                         <li>
                             <span class="total-fee">
                                 <?php
-                                $sql = "SELECT SUM(qty) as tongsoluong FROM `bill_detail` WHERE bill_id = $id";
+                                $sql = "SELECT SUM(qty) as tongsoluong FROM bill_detail WHERE bill_id = $id";
                                 $result = mysqli_query($conn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 if ($num_rows > 0) {
@@ -135,7 +135,7 @@ if ($_GET['id']) {
                             </span>
                             <span class="total">
                                 <?php
-                                $sql = "SELECT SUM(sub_total) as tongdonhang FROM `bill_detail` WHERE bill_id = $id";
+                                $sql = "SELECT SUM(sub_total) as tongdonhang FROM bill_detail WHERE bill_id = $id";
                                 $result = mysqli_query($conn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 if ($num_rows > 0) {

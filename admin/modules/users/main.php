@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <?php
-$sql = "SELECT * FROM `users` where status != 2";
+$sql = "SELECT * FROM users where status != 2";
 $result = mysqli_query($conn, $sql);
 $list_users = array();
 $num_rows = mysqli_num_rows($result);
@@ -13,7 +13,7 @@ if ($num_rows > 0) {
     }
 }
 // phân trang
-$number_rows = db_num_rows("SELECT * FROM `users`");
+$number_rows = db_num_rows("SELECT * FROM users");
 $num_per_page = 9;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);
@@ -133,17 +133,6 @@ unset($user);
                                     }
                                     ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Họ và tên</span></td>
-                                        <td><span class="thead-text">Số điện thoại</span></td>
-                                        <td><span class="thead-text">Email</span></td>
-                                        <td><span class="thead-text">Địa chỉ</span></td>
-                                        <td><span class="thead-text">Giới tính</span></td>
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <?php

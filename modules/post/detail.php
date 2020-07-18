@@ -6,7 +6,7 @@ $id = (int) $_GET['id'];
 //$post_cat_id = get_list_post_cat($id);
 ////show_array($post_cat);
 
-$sql = "SELECT * FROM `post`,`post_cat` where post.cat_id = post_cat.cat_id and id={$id}";
+$sql = "SELECT * FROM post,post_cat where post.cat_id = post_cat.cat_id and id={$id}";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);
@@ -19,7 +19,7 @@ if ($num_rows > 0) {
 
 <?php
 $id = (int) $_GET['id'];
-$sql = "SELECT * FROM `post`, `post_cat` WHERE `id` = '{$id}' and post.cat_id = post_cat.cat_id";
+$sql = "SELECT * FROM post, post_cat WHERE id = '{$id}' and post.cat_id = post_cat.cat_id";
 $result = mysqli_query($conn, $sql);
 //$info_cat_mobile = array();
 $num_rows = mysqli_num_rows($result);
@@ -84,8 +84,7 @@ if ($num_rows > 0) {
                         <div class="g-plusone" data-size="medium"></div>
                     </div>
                     <div class="fb-comments" id="fb-comment" data-href="" data-numposts="5"></div>
-                    <div class="fb-comments" data-href="http://ducht.000webhostapp.com/" data-width="100%" data-numposts="5"></div>
-                    <!-- edit data-href here -->
+                    <div class="fb-comments" data-href="http://localhost/SPACETEAM/" data-width="100%" data-numposts="5"></div>
                 </div>
             </div>
         </div>

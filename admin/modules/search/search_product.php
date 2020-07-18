@@ -9,7 +9,7 @@ if (isset($_POST['keyword'])) {
     $keyword = $_GET['keyword'];
 }
 
-$sql = "SELECT *,product.id,product.status FROM `product`,`category` where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.created_at DESC";
+$sql = "SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.created_at DESC";
 $result = mysqli_query($conn, $sql);
 $list_product = array();
 $num_rows = mysqli_num_rows($result);
@@ -22,7 +22,7 @@ if ($num_rows > 0 && $keyword != "") {
 <?php
 //show_array($list_product);
 // phân trang
-$number_rows = db_num_rows("SELECT *,product.id,product.status FROM `product`,`category` where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.created_at DESC");
+$number_rows = db_num_rows("SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.created_at DESC");
 $num_per_page = 5;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);
@@ -190,26 +190,7 @@ unset($product);
                                 ?>
 
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td><span class="thead-text">STT</span></td>
-                                    <td><span class="thead-text">Mã sản phẩm</span></td>
-                                    <td><span class="thead-text">Hình ảnh</span></td>
-                                    <td><span class="thead-text">Tên sản phẩm</span></td>
-                                    <td><span class="thead-text">Giá mới</span></td>
-                                    <td><span class="thead-text">Thumb_1</span></td>
-                                    <td><span class="thead-text">Thumb_2</span></td>
-                                    <td><span class="thead-text">Thumb_3</span></td>
-                                    <td><span class="thead-text">Thumb_4</span></td>
-                                    <td><span class="thead-text">Thumb_5</span></td>
-                                    <td><span class="thead-text">Thumb_6</span></td>
-                                    <td><span class="thead-text">Danh mục</span></td>
-                                    <td><span class="thead-text">Trạng thái</span></td>
-                                    <td><span class="thead-text">Số lượng tồn</span></td>
-                                    <td><span class="thead-text">Sản phẩm bán chạy</span></td>
-                                    <td><span class="thead-text">Sản phẩm nổi bật</span></td>
-                                </tr>
-                            </tfoot>
+                            
                         </table>
                     </div>
                     <?php

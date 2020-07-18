@@ -1,7 +1,7 @@
 <?php
 
 $id = (int) $_GET['id'];
-//$sql = "SELECT * FROM `bill_detail` WHERE `id` = '{$id}'";
+//$sql = "SELECT * FROM bill_detail WHERE id = '{$id}'";
 //$result = mysqli_query($conn, $sql);
 //$list_bill_detail = array();
 //$num_rows = mysqli_num_rows($result);

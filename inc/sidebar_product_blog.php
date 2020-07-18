@@ -14,7 +14,7 @@ if ($num_rows > 0) {
 //show_array($list_cat);
 ?>
 <?php
-$sql = "SELECT * FROM `post_cat` where post_cat.status = 1";
+$sql = "SELECT * FROM post_cat where post_cat.status = 1";
 $result = mysqli_query($conn, $sql);
 $list_post_cat = array();
 $num_rows = mysqli_num_rows($result);

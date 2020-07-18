@@ -4,20 +4,20 @@ function get_list_bill(){
     return $result;
 }
 function get_list_bill_id($id){
-    $result = db_fetch_row("SELECT * FROM `bill` where bill_id = $id");
+    $result = db_fetch_row("SELECT * FROM bill where bill_id = $id");
     return $result;
 }
 function get_list_bill_detail_id($id){
-    $result = db_fetch_array("SELECT * FROM `bill_detail` where bill_id = $id");
+    $result = db_fetch_array("SELECT * FROM bill_detail where bill_id = $id");
     return $result;
 }
 
 function get_list_product($id) {
-    $result = db_fetch_array("SELECT * FROM `product` where id = $id");
+    $result = db_fetch_array("SELECT * FROM product where id = $id");
     return $result;
 }
 function get_list_number($id) {
-    $result = db_fetch_array("SELECT * FROM `product`,`bill_detail` where product.id = bill_detail.product_id");
+    $result = db_fetch_array("SELECT * FROM product,bill_detail where product.id = bill_detail.product_id");
     return $result;
 }
 function get_bill($start, $num_per_page) {
@@ -33,12 +33,12 @@ function get_search_bill($start, $num_per_page, $keyword = "") {
     return $result;
 }
 function get_bill_id($bill_id){
-    $result = db_fetch_row("SELECT * FROM `bill` where bill_id = $bill_id");
+    $result = db_fetch_row("SELECT * FROM bill where bill_id = $bill_id");
     return $result;
 }
 
 function bill_total($username, $email) {
-    $check_user = db_num_rows("select * from `bill_detail`");
+    $check_user = db_num_rows("select * from bill_detail");
     echo $check_user;
     if ($check_user > 0)
         return TRUE;
@@ -47,15 +47,15 @@ function bill_total($username, $email) {
 
 function get_total($item) {
     $total = 0;
-    $result = db_fetch_array("SELECT * FROM `bill_detail` WHERE bill_id = $id");
+    $result = db_fetch_array("SELECT * FROM bill_detail WHERE bill_id = '{$item}'");
     $total = $total + $item['sub_total'];
     return $result;
 }
 function active_order($id) {
-    return db_update('bill_detail', array('status' => 1), "`id`='{$id}'");
+    return db_update('bill_detail', array('status' => 1), "id='{$id}'");
 }
 function check_active_order($id) {
-    $check = db_num_rows("select * from `bill_detail` where `id` = '{$id}' and `status` = '0'");
+    $check = db_num_rows("select * from bill_detail where id = '{$id}' and status = '0'");
     if ($check = 0)
         return true;
     return false;

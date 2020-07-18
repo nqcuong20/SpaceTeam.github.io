@@ -10,7 +10,7 @@ if (isset($_POST['keyword'])) {
     $keyword = $_GET['keyword'];
 }
 
-$sql = "SELECT *,post.id,post.status FROM `post`,`post_cat` where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%'";
+$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%'";
 $result = mysqli_query($conn, $sql);
 $list_post = array();
 $num_rows = mysqli_num_rows($result);
@@ -20,7 +20,7 @@ if ($num_rows > 0 && $keyword != "") {
     }
 }
 // phân trang
-$number_rows = db_num_rows("SELECT *,post.id,post.status FROM `post`,`post_cat` where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%'");
+$number_rows = db_num_rows("SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%'");
 $num_per_page = 5;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);
@@ -144,20 +144,6 @@ unset($post);
                                     }
                                     ?>
                                 </tbody>
-
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Hình ảnh</span></td>
-                                        <td><span class="thead-text">Tiêu đề</span></td>
-                                        <td><span class="thead-text">Danh mục</span></td>
-                                        <td><span class="thead-text">Mô tả</span></td>
-                                        <td><span class="thead-text">Ngày tạo</span></td>
-                                        <td><span class="thead-text">Ngày cật nhật</span></td>
-                                        <td><span class="thead-text">Bài viết nổi bật</span></td>
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <?php

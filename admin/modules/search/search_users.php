@@ -9,7 +9,7 @@ if (isset($_POST['keyword'])) {
 } else if (isset($_GET['keyword'])) {
     $keyword = $_GET['keyword'];
 }
-$sql = "SELECT * FROM `users` where status != 2 and fullname like N'%$keyword%' or email like N'%$keyword%' or address like N'%$keyword%'";
+$sql = "SELECT * FROM users where status != 2 and fullname like N'%$keyword%' or email like N'%$keyword%' or address like N'%$keyword%'";
 $result = mysqli_query($conn, $sql);
 $list_users = array();
 $num_rows = mysqli_num_rows($result);
@@ -21,7 +21,7 @@ if ($num_rows > 0 && $keyword != "") {
 ?>
 <?php
 // phân trang
-$number_rows = db_num_rows("SELECT * FROM `users` where status != 2 and fullname like N'%$keyword%' or email like N'%$keyword%' or address like N'%$keyword%'");
+$number_rows = db_num_rows("SELECT * FROM users where status != 2 and fullname like N'%$keyword%' or email like N'%$keyword%' or address like N'%$keyword%'");
 $num_per_page = 9;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);

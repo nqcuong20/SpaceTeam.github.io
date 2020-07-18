@@ -5,7 +5,7 @@ get_header();
 $list_slider = get_list_slider();
 //show_array($list_slider);
 // phân trang
-$number_rows = db_num_rows("SELECT * FROM `slider` where status != 2");
+$number_rows = db_num_rows("SELECT * FROM slider where status != 2");
 $num_per_page = 8;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);
@@ -125,17 +125,6 @@ unset($item);
                                     }
                                     ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Tên slider</span></td>
-                                        <td><span class="thead-text">Hình ảnh</span></td>
-                                        <td><span class="thead-text">Người tạo</span></td>
-                                        <td><span class="thead-text">Ngày tạo</span></td>
-                                        <td><span class="thead-text">Ngày cập nhật</span></td>   
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <?php

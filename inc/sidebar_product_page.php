@@ -2,7 +2,7 @@
 require 'db/connect.php';
 ?>
 <?php
-$sql = "SELECT * FROM `category` where status = 1 ";
+$sql = "SELECT * FROM category where status = 1 ";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $num_rows = mysqli_num_rows($result);

@@ -55,7 +55,7 @@ if (isset($_POST['btn_update'])) {
 
     // Bước 3: Kết luận
     if (empty($error)) {
-        $sql = "update `users` set `fullname`='{$fullname}',`gender`='{$gender}',`email`='{$email}',`phone`='{$phone}',`address`='{$address}',`status`='{$status}' where `user_id`='{$id}'";
+        $sql = "update users set fullname='{$fullname}',gender='{$gender}',email='{$email}',phone='{$phone}',address='{$address}',status='{$status}' where user_id='{$id}'";
         if (mysqli_query($conn, $sql)) {
             $_SESSION['success'] = "Cập nhật thành công";
             redirect_to("?mod=users&act=main");
@@ -66,7 +66,7 @@ if (isset($_POST['btn_update'])) {
 }
 ?>
 <?php
-$sql = "select *from `users` where `user_id` = $id";
+$sql = "select *from users where user_id = $id";
 $result = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($result);
 //show_array($item);

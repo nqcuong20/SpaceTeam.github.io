@@ -3,9 +3,9 @@ get_header();
 ?>
 <?php
 $list_buy = get_list_by_cart();
-//show_array($list_order);
+// show_array($list_buy);
 $list_users = get_list_users_cat($_SESSION['user_login']);
-//show_array($list_users);
+// show_array($list_users);
 ?>
 <?php
 //if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -92,13 +92,12 @@ if (isset($_SESSION["cart"]["buy"])) {
         }
         // Bước 3: Kết luận
         if (empty($error)) {
-            $sql = "INSERT INTO `bill` (`user_id`,`fullname`,`email`,`phone`,`address`, `note`)"
-                    . "VALUES('{$user_id}','{$fullname}', '{$email}','{$phone}','{$address}', '{$note}')";
+            $sql = "INSERT INTO bill (user_id,fullname,email,phone,address, note) VALUES('{$user_id}','{$fullname}', '{$email}','{$phone}','{$address}', '{$note}')";
             if ($conn->query($sql)) {
                 $bill_id = $conn->insert_id;
                 //Lưu chi tiết hóa đơn
                 $list_buy = get_list_by_cart();
-//                show_array($list_buy);
+                // show_array($list_buy);
                 foreach ($list_buy as $cart) {
                     $product_id = $cart['id'];
                     $product_name = $cart['product_name'];
@@ -106,8 +105,7 @@ if (isset($_SESSION["cart"]["buy"])) {
                     $qty = $cart['qty'];
                     $price_new = $cart['price_new'];
                     $sub_total = $cart['sub_total'];
-                    $sql = "INSERT INTO `bill_detail` (`bill_id`,`product_id`,`product_name`,`product_thumb`,`qty`,`price_new`,`sub_total`)"
-                            . "VALUES('{$bill_id}','{$product_id}', '{$product_name}', '{$product_thumb}','{$qty}','{$price_new}','{$sub_total}')";
+                    $sql = "INSERT INTO bill_detail (bill_id,product_id,product_name,product_thumb,qty,price_new,sub_total) VALUES('{$bill_id}','{$product_id}', '{$product_name}', '{$product_thumb}','{$qty}','{$price_new}','{$sub_total}')";
                     $conn->query($sql);
                 }
                 unset($_SESSION["cart"]);
@@ -119,10 +117,10 @@ if (isset($_SESSION["cart"]["buy"])) {
                 <h1 style="color:red;">Thông báo đơn hàng hoàn tất</h1>
                 <p>Chào <b>' . $fullname . '</b></p>'
                         . '<p>Đơn hàng #<b>' . $bill_id . '</b> của bạn đã hoàn tất.</p>'
-                        . 'Cảm ơn bạn đã mua hàng tại ISMART.<br> Thông tin đơn hàng của bạn: <b> ' . displayResultsAsTable($list_buy) . '</b>
+                        . 'Cảm ơn bạn đã mua hàng tại SPACE TEAM.<br> Thông tin đơn hàng của bạn: <b> ' . displayResultsAsTable($list_buy) . '</b>
                 <p>Rất mong được phục vụ bạn trong những lần mua tiếp theo.</p>
                 ';
-                echo send_mail("$email", "$fullname", 'Thông báo đơn hàng', "$content");
+                
                 redirect_to("?mod=check_out&act=care_customer");
             }
         } else {

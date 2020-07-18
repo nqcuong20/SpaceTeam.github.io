@@ -8,7 +8,7 @@ get_header();
 
 <?php
 $id = (int) $_GET['id'];
-$sql = "SELECT * FROM `category` WHERE `cat_id` = '{$id}' and status = 1";
+$sql = "SELECT * FROM category WHERE cat_id = '{$id}' and status = 1";
 $result = mysqli_query($conn, $sql);
 $list_cat = array();
 $number_rows = mysqli_num_rows($result);
@@ -36,6 +36,10 @@ if (isset($_GET['id'])) {
     $list_product = get_product_categoryes($start, $num_per_page, $id);
 }
 
+
+
+$default_sorting = get_default_sorting($id);
+//show_array($default_sorting);
 ?>
 
 
@@ -66,7 +70,7 @@ if (isset($_GET['id'])) {
                 ?>
             </div>
         </div>
-        
+        <?php get_sidebar(); ?>
         <div class="main-content fl-right">
             <div class="section" id="list-product-wp">
                 <div class="section-head clearfix">
@@ -86,17 +90,12 @@ if (isset($_GET['id'])) {
                                                                         <option value="1">Từ A-Z</option>
                                                                         <option value="2">Từ Z-A</option>
                                                                         <option value="3">Giá cao xuống thấp</option>
-                                                                        <option value="3">Giá thấp lên cao</option>-->
+                                                                        <option value="4">Giá thấp lên cao</option>-->
                                     <script type="text/javascript">
                                         $(document).ready(function () {
                                             $(".city").change(function () {
                                                 var id = $(".city").val();
-                                                if (id == 1) {
-                                                    location.replace('?mod=sort&act=A-Z&id=<?php echo $id; ?>');
-                                                } else if (id == 2)
-                                                {
-                                                    location.replace('?mod=sort&act=Z-A&id=<?php echo $id; ?>');
-                                                } else if (id == 3)
+                                                if (id == 3)
                                                 {
                                                     location.replace('?mod=sort&act=high_low&id=<?php echo $id; ?>');
                                                 } else if (id == 4)
@@ -185,7 +184,7 @@ if (isset($_GET['id'])) {
                     <div class="section-detail clearfix">
                         <?php
                         $id = $item['cat_id'];
-                        echo $num_page, $page, "?mod=product&act=category_product", $id;
+                        echo get_pagging_category_product($num_page, $page, "?mod=product&act=category_product", $id);
                         ?>
                     </div>
                     <?php
