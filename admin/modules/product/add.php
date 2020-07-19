@@ -215,7 +215,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=product&act=upload_single">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
                             <div id="show_list_file" >
                             </div>
                             <?php echo form_error('file'); ?>
@@ -223,7 +223,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 1</label>
                             <input type="file" name="file_1" id="file_1" data-uri="?mod=product&act=upload_single_1">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_1">
                             <div id="show_list_file_1" >
                             </div>
                             <?php echo form_error('file_1'); ?>
@@ -231,7 +231,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 2</label>
                             <input type="file" name="file_2" id="file_2" data-uri="?mod=product&act=upload_single_2">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_2">
                             <div id="show_list_file_2" >
                             </div>
                             <?php echo form_error('file_2'); ?>
@@ -239,7 +239,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 3</label>
                             <input type="file" name="file_3" id="file_3" data-uri="?mod=product&act=upload_single_3">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_3">
                             <div id="show_list_file_3" >
                             </div>
                             <?php echo form_error('file_3'); ?>
@@ -247,7 +247,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 4</label>
                             <input type="file" name="file_4" id="file_4" data-uri="?mod=product&act=upload_single_4">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_4">
                             <div id="show_list_file_4" >
                             </div>
                             <?php echo form_error('file_4'); ?>
@@ -255,7 +255,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 5</label>
                             <input type="file" name="file_5" id="file_5" data-uri="?mod=product&act=upload_single_5">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_5">
                             <div id="show_list_file_5" >
                             </div>
                             <?php echo form_error('file_5'); ?>
@@ -263,7 +263,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình 6</label>
                             <input type="file" name="file_6" id="file_6" data-uri="?mod=product&act=upload_single_6">
-                           
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_6">
                             <div id="show_list_file_6" >
                             </div>
                             <?php echo form_error('file_6'); ?>

@@ -88,7 +88,7 @@ if (!empty($alert['success'])) {
         <div id="content" class="fl-right">
             <div class="section" id="title-page">
                 <div class="clearfix">
-                    <h3 id="index" class="fl-left">Cập nhật sản phẩm</h3>
+                    <h3 id="index" class="fl-left">Cập Nhật Thông Tin Khách Hàng</h3>
                 </div>
             </div>
             <div class="clearfix"></div>

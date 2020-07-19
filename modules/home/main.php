@@ -58,7 +58,7 @@ $list_post = get_post();
                                 <img src="admin/uploads/icon-2.png">
                             </div>
                             <h3 class="title">Tư vấn 24/7</h3>
-                            <p class="desc">1900.9999</p>
+                            <p class="desc">0377077630</p>
                         </li>
                         <li>
                             <div class="thumb">
