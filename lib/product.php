@@ -4,13 +4,14 @@ function get_list_product_by_cat_id($cat_id) {
     $result = db_fetch_array("SELECT *,product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.created_at DESC limit 8");
     return $result;
 }
-
+// 
 function get_list_cat_product_by_cat_id($cat_id) {
-    $result = db_fetch_array("SELECT *,product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.created_at DESC "  );
+    $result = db_fetch_array("SELECT *, product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.created_at DESC "  );
     return $result;
 }
+// lấy sp của từng danh muc sản phẩm theo cat_id 
 
-// lấy danh muc sản phẩm theo cat_id
+
 function get_info_cat($cat_id) {
     $result = db_fetch_row("SELECT * FROM category WHERE cat_id = {$cat_id} and status = 1");
     return $result;

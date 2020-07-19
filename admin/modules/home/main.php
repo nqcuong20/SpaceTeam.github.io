@@ -88,14 +88,8 @@ get_header();
                                     <p style="text-align: center;">Tổng hóa đơn</p>
                                     <h1 style="text-align: center; font-size: 50px;">
                                         <?php
-                                        $sql = "select count(id) as tongdonhang from bill_detail where 1";
-                                        $result = mysqli_query($conn, $sql);
-                                        $num_rows = mysqli_num_rows($result);
-                                        if ($num_rows > 0) {
-                                            while ($row = mysqli_fetch_assoc($result)) {
-                                                echo $row['tongdonhang'];
-                                            }
-                                        }
+                                        $number_rows = db_num_rows("SELECT bill.fullname,bill.note,bill.created_at,bill.email,bill.address ,bill.phone,bill_detail.bill_id,bill_detail.status,bill_detail.product_id FROM bill_detail,bill, product WHERE bill.bill_id = bill_detail.bill_id AND product.id = bill_detail.product_id and bill_detail.status !=2 GROUP by bill.bill_id");
+                                        echo $number_rows;
                                         ?>
                                     </h1>
                                 </div>

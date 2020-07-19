@@ -4,6 +4,7 @@ get_header();
 <?php
     $cat_id = (int) $_GET['id'];
     $list_product = get_list_cat_product_by_cat_id($cat_id);
+    
 ?>
 
 <?php

@@ -8,7 +8,6 @@ if ($num_rows > 0) {
     $row = $result->fetch_assoc();
     $list_post[] = $row;
 }
-
 if ($list_post > 0) {
     $_SESSION['success'] = "Xóa thành công";
     redirect_to("?mod=post&act=main");

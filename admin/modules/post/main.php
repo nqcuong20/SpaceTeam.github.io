@@ -21,7 +21,7 @@ $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 $start = ($page - 1) * $num_per_page;
 $list_post = get_post($start, $num_per_page);
 
-//show_array($list_post);
+// show_array($list_post);
 foreach ($list_post as &$post) {// &:tham tri
     $post['url_update'] = "?mod=post&act=update&id={$post['id']}";
     $post['url_delete'] = "?mod=post&act=delete&id={$post['id']}";

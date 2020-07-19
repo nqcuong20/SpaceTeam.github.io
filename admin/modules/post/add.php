@@ -19,7 +19,6 @@ if (isset($_POST['btn_add'])) {
         $cat_id = $_POST['cat_id'];
     }
     //Ktra hình ảnh
-
     if (empty($_POST['post_desc'])) {
         $error['post_desc'] = "Bạn chưa nhập Mô tả bài viết";
     } else {

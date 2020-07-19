@@ -55,6 +55,7 @@ get_header()
                     </div>
                 </div>
             </div>
+           
             <div class="section" id="social-wp">
                 <div class="section-detail">
                     <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
