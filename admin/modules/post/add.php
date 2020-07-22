@@ -100,7 +100,7 @@ if (isset($_POST['btn_add'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=post&act=upload_single">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
                             <div id="show_list_file" >
                             </div>
                             <?php
