@@ -1,7 +1,9 @@
 <?php
 
 $id = (int) $_GET['id'];
-$sql = "update product set status = 0 where id = $id";
+$sql = "DELETE from  product where id = $id ";
+
+// $sql = "DELETE from product  where id = $id ";
 $list_product = array();
 $result = mysqli_query($conn, $sql);
 $num_rows = mysqli_num_rows($result);
@@ -17,4 +19,5 @@ if ($list_product > 0) {
     $_SESSION['error'] = "Xóa thất bại";
     redirect_to("?mod=product&act=main");
 }
+
 ?>

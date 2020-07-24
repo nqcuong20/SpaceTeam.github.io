@@ -4,7 +4,7 @@ get_header();
 
 <?php
 // Xuất dữ liệu
-$sql = "SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 ORDER by product.created_at DESC";
+$sql = "SELECT * , product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 ORDER by product.created_at DESC";
 $result = mysqli_query($conn, $sql);
 $list_product = array();
 $num_rows = mysqli_num_rows($result);
@@ -118,9 +118,10 @@ unset($product);
                                                     ?>
                                                 <li><a href="<?php echo $product['url_delete']; ?>" title="Xóa" onclick="return confirmAction_product()" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
                                                 <?php
-                                                }else{
+                                                }
+                                                else{
                                                 ?>
-                                                <li><a href="" title="Xóa" onclick="return confirmAction_delete_status_product()" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                                <li><a href="<?php echo $product['url_delete']; ?>" title="Xóa" onclick="return confirmAction_delete_status_product()" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
                                                 <?php
                                                 }
                                                 ?>
@@ -164,11 +165,13 @@ unset($product);
                                                 <?php
                                                 if ($product['status'] == 1) {
                                                     ?>
-                                                    <a class="btn btn-xs btn-info">Đang bán</a>
+                                                    <a href="?mod=product&act=error_action&id=<?php echo $product['id'] ?>" class="btn btn-xs btn-info">Đang bán</a>
+                                                    
                                                     <?php
                                                 } else if ($product['status'] == 0) {
                                                     ?>
-                                                    <a class="btn btn-xs btn-default">Ngừng bán</a>
+                                                    <a href="?mod=product&act=error_action&id=<?php echo $product['id'] ?>" class="btn btn-xs btn-default">Ngừng bán</a>
+                                                    
                                                     <?php
                                                 }
                                                 ?>

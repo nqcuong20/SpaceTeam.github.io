@@ -21,7 +21,11 @@ if ($list_bill_detail["status"] == 1) {
 $status = 1;
 $update = update("bill_detail", array("status" => $status), array("bill_id" => $id));
 if ($update > 0) {
-    $_SESSION['success'] = "Cập nhật thành công";
+    $_SESSION['error'] = "Dữ liệu không thay đổi";
+    redirect_to("?mod=bill&act=list_order");
+    
+} else {
+    $_SESSION['success'] = "Xử lý thành công";
     $sql = " SELECT * FROM  bill_detail WHERE bill_id = $id";
     $order = fetchsql($sql);
     foreach ($order as $item) {
@@ -31,9 +35,6 @@ if ($update > 0) {
         $number = $product["qty_product"] - $item['qty'];
         $update_pro = update("product", array("qty_product" => $number), array("id" => $product_id));
     }
-    redirect_to("?mod=bill&act=list_order");
-} else {
-    $_SESSION['error'] = "Dữ liệu không thay đổi";
     redirect_to("?mod=bill&act=list_order");
 }
 ?>

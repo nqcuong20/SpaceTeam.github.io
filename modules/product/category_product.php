@@ -20,7 +20,6 @@ if ($number_rows > 0) {
 //show_array($list_product);
 ?>
 
-
 <?php
 // phân trang
 if (isset($_GET['id'])) {
@@ -42,8 +41,6 @@ if (isset($_GET['id'])) {
 $default_sorting = get_default_sorting($id);
 //show_array($default_sorting);
 ?>
-
-
 
 <div id="main-content-wp" class="clearfix category-product-page">
     <div class="wp-inner">

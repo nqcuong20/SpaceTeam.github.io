@@ -2,7 +2,7 @@
 get_header();
 ?>
 <?php
-$sql = "SELECT * FROM `page` where status != 2";
+$sql = "SELECT * FROM `page` where status != 2 ";
 $result = mysqli_query($conn, $sql);
 $list_page = array();
 $num_rows = mysqli_num_rows($result);

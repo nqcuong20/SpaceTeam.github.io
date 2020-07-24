@@ -3,9 +3,11 @@ get_header();
 ?>
 <?php
 // Xuất dữ liệu
-$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2";
+$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 ORDER by post.id DESC ";
 $result = mysqli_query($conn, $sql);
 $list_post = array();
+// $item = mysqli_fetch_array($result);
+// show_array($item);
 $num_rows = mysqli_num_rows($result);
 if ($num_rows > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -122,11 +124,11 @@ unset($post);
                                                     <?php
                                                     if ($post['status'] == 1) {
                                                         ?>
-                                                        <a class="btn btn-xs btn-info">Hiển thị</a>
+                                                        <a href="?mod=post&act=error_action&id=<?php echo $post['id'] ?>" class="btn btn-xs btn-info">Hiển thị</a>
                                                         <?php
                                                     } else if ($post['status'] == 0) {
                                                         ?>
-                                                        <a class="btn btn-xs btn-default">Không</a>
+                                                        <a href="?mod=post&act=error_action&id=<?php echo $post['id'] ?>" class="btn btn-xs btn-default">Không</a>
                                                         <?php
                                                     }
                                                     ?>

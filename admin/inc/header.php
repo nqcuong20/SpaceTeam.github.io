@@ -72,7 +72,7 @@
                 return confirm("Bạn muốn đăng xuất?")
             }
             function confirmAction_delete_status_product() {
-                return confirm("Sản phẩm này đã được xóa?")
+                return confirm("Bạn muốn xóa sản phẩm này?")
             }
             function confirmAction_delete_status_post() {
                 return confirm("Bài viết này đã được xóa?")

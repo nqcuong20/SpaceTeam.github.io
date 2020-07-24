@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-
 <?php
 $sql = "SELECT * FROM users where status != 2";
 $result = mysqli_query($conn, $sql);
@@ -118,11 +117,13 @@ unset($user);
                                                     <?php
                                                     if ($user['status'] == 1) {
                                                         ?>
-                                                        <a class="btn btn-xs btn-info">Hiển thị</a>
+                                                            <a href="?mod=users&act=error_action&user_id=<?php echo $user['user_id'] ?>" class="btn btn-xs btn-info">Hiển Thị</a>
+                                                            
                                                         <?php
-                                                    } else if ($user['status'] == 0) {
+                                                    } 
+                                                    else if ($user['status'] == 0) {
                                                         ?>
-                                                        <a class="btn btn-xs btn-default">Không</a>
+                                                            <a href="?mod=users&act=error_action&user_id=<?php echo $user['user_id'] ?>" class="btn btn-xs btn-default">Không</a>
                                                         <?php
                                                     }
                                                     ?>

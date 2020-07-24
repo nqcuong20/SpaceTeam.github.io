@@ -1,6 +1,6 @@
 <?php
 $id = (int)$_GET['id'];
-$sql = "update post set status = 0 where id = $id";
+$sql = "DELETE from  post where id = $id";
 $list_post = array();
 $result = mysqli_query($conn, $sql);
 $num_rows = mysqli_num_rows($result);
