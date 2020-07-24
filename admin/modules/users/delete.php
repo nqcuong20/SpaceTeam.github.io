@@ -38,7 +38,7 @@ if ($list_userskh == NULL) {
         redirect_to("?mod=users&act=main");
     }
 } else {
-    $_SESSION['error'] = "Danh mục có bài viết ! Bạn không thể xóa";
+    $_SESSION['error'] = "Khách hàng có đơn hàng ! Nên không thể xóa";
     redirect_to("?mod=users&act=main");
 }
 ?>
