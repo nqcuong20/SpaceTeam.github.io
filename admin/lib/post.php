@@ -1,6 +1,6 @@
 <?php
 function get_post_cat_id($cat_id){
-    $result = db_fetch_row("SELECT * FROM post_cat where cat_id = $cat_id ORDER by post.id DESC");
+    $result = db_fetch_row("SELECT * FROM post_cat where cat_id = $cat_id ");
     return $result;
 }
 function get_post_status($id){
