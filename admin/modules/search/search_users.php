@@ -140,17 +140,7 @@ unset($user);
                                     }
                                     ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><span class="thead-text">STT</span></td>
-                                        <td><span class="thead-text">Họ và tên</span></td>
-                                        <td><span class="thead-text">Số điện thoại</span></td>
-                                        <td><span class="thead-text">Email</span></td>
-                                        <td><span class="thead-text">Địa chỉ</span></td>
-                                        <td><span class="thead-text">Giới tính</span></td>
-                                        <td><span class="thead-text">Trạng thái</span></td>
-                                    </tr>
-                                </tfoot>
+                                
                             </table>
                         </div>
                         <?php

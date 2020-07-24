@@ -9,6 +9,7 @@ if (isset($_POST['keyword'])) {
     $keyword = $_GET['keyword'];
 }
 
+echo $keyword;
 $sql = "SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.id ASC";
 $result = mysqli_query($conn, $sql);
 $list_product = array();
