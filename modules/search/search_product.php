@@ -12,7 +12,7 @@ if (isset($_POST['keyword'])) {
 //    $keyword = '!';
 //}
 
-$sql = "select *,product.created_at from product, category where product.cat_id = category.cat_id and category.status = 1 and product.status = 1 and product_name like N'%{$keyword}%' ORDER by product.created_at DESC";
+$sql = "select *,product.created_at from product, category where product.cat_id = category.cat_id and category.status = 1 and product.status = 1 and product_name like N'%{$keyword}%' ORDER by product.id ASC";
 $result = mysqli_query($conn, $sql);
 $list_search = array();
 $num_rows = mysqli_num_rows($result);

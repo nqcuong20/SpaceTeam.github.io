@@ -9,11 +9,11 @@
 
 // phân trang sản phẩm
 function get_product($start, $num_per_page) {
-    $result = db_fetch_array("SELECT *,product.id,product.status,product.created_at FROM product,category where product.cat_id = category.cat_id and product.status != 2 ORDER by product.created_at DESC LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT *,product.id,product.status,product.created_at FROM product,category where product.cat_id = category.cat_id and product.status != 2 ORDER by product.id  ASC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 function get_search_product($start, $num_per_page,$keyword="") {
-    $result = db_fetch_array("SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.created_at DESC LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT *,product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 and product_name like N'%$keyword%' ORDER by product.id ASC {$start}, {$num_per_page}");
     return $result;
 }
 

@@ -1,12 +1,12 @@
 <?php
 // trang chủ để lấy giới han hiển thi 12 sp
 function get_list_product_by_cat_id($cat_id) {
-    $result = db_fetch_array("SELECT *,product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.created_at DESC limit 8");
+    $result = db_fetch_array("SELECT *,product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.id  ASC limit 8");
     return $result;
 }
 // 
 function get_list_cat_product_by_cat_id($cat_id) {
-    $result = db_fetch_array("SELECT *, product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.created_at DESC "  );
+    $result = db_fetch_array("SELECT *, product.created_at FROM product,category WHERE product.cat_id = category.cat_id and product.cat_id = {$cat_id} and category.status = 1 and product.status = 1 ORDER by product.id ASC "  );
     return $result;
 }
 // lấy sp của từng danh muc sản phẩm theo cat_id 
@@ -47,11 +47,11 @@ function get_product($start, $num_per_page) {
     return $result;
 }
 function get_search_product($start, $num_per_page,$keyword) {
-    $result = db_fetch_array("select *,product.created_at from product, category where product.cat_id = category.cat_id and category.status = 1 and product.status = 1 and product_name like N'%{$keyword}%' ORDER by product.created_at DESC LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("select *,product.created_at from product, category where product.cat_id = category.cat_id and category.status = 1 and product.status = 1 and product_name like N'%{$keyword}%' ORDER by product.id ASC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 function get_product_categoryes($start, $num_per_page, $id) {
-    $result = db_fetch_array("SELECT * FROM product where cat_id = {$id} and status = 1 ORDER by product.created_at DESC LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT * FROM product where cat_id = {$id} and status = 1 ORDER by product.id ASC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 
