@@ -62,6 +62,7 @@ function get_highlow() {
     return $result;
 }
 
+
 function get_product_highlow_cate($start, $num_per_page, $id) {
     $result = db_fetch_array("SELECT * FROM product where cat_id= $id and status = 1  ORDER BY price_new DESC LIMIT {$start}, {$num_per_page}");
     return $result;

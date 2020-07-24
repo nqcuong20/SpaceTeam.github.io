@@ -3,7 +3,7 @@ get_header();
 ?>
 <?php
 // phân trang
-$number_rows = db_num_rows("SELECT bill.fullname,bill.note,bill.created_at,bill.email,bill.address ,bill.phone,bill_detail.bill_id,bill_detail.status,bill_detail.product_id FROM bill_detail,bill, product WHERE bill.bill_id = bill_detail.bill_id AND product.id = bill_detail.product_id and bill_detail.status = 1 GROUP by bill.bill_id");
+$number_rows = db_num_rows("SELECT bill.fullname,bill.note,bill.created_at,bill.email,bill.address ,bill.phone,bill_detail.bill_id,bill_detail.status,bill_detail.product_id FROM bill_detail,bill, product WHERE bill.bill_id = bill_detail.bill_id AND product.id = bill_detail.product_id and bill_detail.status = 1 GROUP by bill.bill_id ORDER by bill.bill_id DESC ");
 $num_per_page = 8;
 $total_row = $number_rows;
 $num_page = ceil($total_row / $num_per_page);

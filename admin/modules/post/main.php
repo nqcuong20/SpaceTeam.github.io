@@ -3,7 +3,7 @@ get_header();
 ?>
 <?php
 // Xuất dữ liệu
-$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 ORDER by post.id DESC ";
+$sql = "SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 ORDER by post.cat_id DESC ";
 $result = mysqli_query($conn, $sql);
 $list_post = array();
 // $item = mysqli_fetch_array($result);

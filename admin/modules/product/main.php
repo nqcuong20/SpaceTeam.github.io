@@ -4,6 +4,7 @@ get_header();
 
 <?php
 // Xuất dữ liệu
+
 $sql = "SELECT * , product.id,product.status FROM product,category where product.cat_id = category.cat_id and product.status != 2 ORDER by product.id ASC";
 $result = mysqli_query($conn, $sql);
 $list_product = array();
@@ -79,12 +80,12 @@ unset($product);
                                     <td><span class="thead-text">Hình ảnh</span></td>
                                     <td><span class="thead-text">Tên sản phẩm</span></td>
                                     <td><span class="thead-text">Giá mới</span></td>
-                                    <td><span class="thead-text">Thumb_1</span></td>
+                                    <!-- <td><span class="thead-text">Thumb_1</span></td>
                                     <td><span class="thead-text">Thumb_2</span></td>
                                     <td><span class="thead-text">Thumb_3</span></td>
                                     <td><span class="thead-text">Thumb_4</span></td>
                                     <td><span class="thead-text">Thumb_5</span></td>
-                                    <td><span class="thead-text">Thumb_6</span></td>
+                                    <td><span class="thead-text">Thumb_6</span></td> -->
                                     <td><span class="thead-text">Danh mục</span></td>
                                     <td><span class="thead-text">Trạng thái</span></td>
                                     <td><span class="thead-text">Số lượng tồn</span></td>
@@ -128,36 +129,7 @@ unset($product);
                                             </ul>
                                         </td>
                                         <td><span class="tbody-text"><?php echo $product['price_new']; ?></span></td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_1']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_2']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_3']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_4']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_5']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tbody-thumb">
-                                                <img src="uploads/<?php echo $product['list_thumb_6']; ?>" alt="">
-                                            </div>
-                                        </td>
+                                        
 
                                         <td><span class="tbody-text"><?php echo $product['cat_name']; ?></span></td>
                                         <td>

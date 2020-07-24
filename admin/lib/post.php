@@ -1,6 +1,6 @@
 <?php
 function get_post_cat_id($cat_id){
-    $result = db_fetch_row("SELECT * FROM post_cat where cat_id = $cat_id");
+    $result = db_fetch_row("SELECT * FROM post_cat where cat_id = $cat_id ORDER by post.id DESC");
     return $result;
 }
 function get_post_status($id){
@@ -13,11 +13,11 @@ function get_page_id($id){
 }
 
 function get_post($start, $num_per_page) {
-    $result = db_fetch_array("SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 ORDER by post.id DESC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 function get_search_post($start, $num_per_page,$keyword="") {
-    $result = db_fetch_array("SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%' LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT *,post.id,post.status FROM post,post_cat where post.cat_id = post_cat.cat_id and post.status != 2 and post_title like N'%$keyword%' ORDER by post.id DESC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 
@@ -27,7 +27,7 @@ function get_page($start, $num_per_page) {
 }
 
 function get_search_page($start, $num_per_page, $keyword = "") {
-    $result = db_fetch_array("select * from page where page_title like N'%$keyword%' or page_content like N'%$keyword%' LIMIT {$start}, {$num_per_page}");
+    $result = db_fetch_array("SELECT * from page where page_title like N'%$keyword%' or page_content like N'%$keyword%' post.id DESC LIMIT {$start}, {$num_per_page}");
     return $result;
 }
 
