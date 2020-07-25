@@ -2,6 +2,7 @@
     <div id="foot-body">
         <div class="wp-inner clearfix">
             <div class="block" id="info-company">
+            <div class="col-4">
                 <h3 class="title" style="color: white;">SPACE TEAM</h3>
                 <p class="desc" style="color: white;">SPACE TEAM luôn cung cấp luôn là sản phẩm chính hãng có thông tin rõ ràng, chính sách ưu đãi cực lớn cho khách hàng có thẻ thành viên.</p>
                 <div id="payment">
@@ -9,7 +10,8 @@
                         <img src="public/images/img-foot.png" alt="">
                     </div>
                 </div>
-            </div>
+            </div></div>
+            <div class="col-4">
             <div class="block menu-ft" id="info-shop">
                 <h3 class="title" style="color: white;">Thông tin cửa hàng</h3>
                 <ul class="list-item">
@@ -23,7 +25,8 @@
                         <p style="color: white;">spaceteam.hcmue@gmail.com</p>
                     </li>
                 </ul>
-            </div>
+            </div></div>
+            <div class="col-4">
             <div class="block menu-ft policy" id="info-shop">
                 <h3 class="title" style="color: white;">Chính sách mua hàng</h3>
                 <ul class="list-item">
@@ -41,7 +44,7 @@
                     </li>
                 </ul>
             </div>
-            
+            </div>
         </div>
     </div>
     <div id="foot-bot">

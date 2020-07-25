@@ -10,7 +10,7 @@ if (empty($list_users)) {
 /**
  * 	kiểm tra xem rằng danh mục có sản phẩm chưa
  */
-$sql = "SELECT* from bill where user_id = $id LIMIT 1";
+$sql = "SELECT* from bill where id = $id LIMIT 1";
 $list_userskh = array();
 $result = mysqli_query($conn, $sql);
 $num_rows = mysqli_num_rows($result);
