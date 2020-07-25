@@ -1,13 +1,17 @@
 <?php
 get_header();
 ?>
-
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    show_array($_POST);
+}
+?>
 
 <?php
 $id = (int) $_GET['id'];
 ?>
 <?php
-$sql = "select *,product.status from product, category where product.cat_id = category.cat_id and id = $id";
+$sql = "select *,product.status from `product`, `category` where product.cat_id = category.cat_id and `id` = $id";
 $result = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($result);
 //show_array($item);
@@ -99,7 +103,7 @@ if (isset($_POST['btn_update'])) {
 
     if (empty($error)) {
         if (!empty($_FILES['file']['name']) && !empty($_FILES['file1']['name']) && !empty($_FILES['file2']['name']) && !empty($_FILES['file3']['name']) && !empty($_FILES['file4']['name']) && !empty($_FILES['file5']['name']) && !empty($_FILES['file6']['name'])) {
-            $sql = "update product set product_name='{$product_name}',price_new='{$price_new}',price_old='{$price_old}',product_desc='{$product_desc}',product_thumb='{$product_thumb}',list_thumb_1='{$list_thumb_1}',list_thumb_2='{$list_thumb_2}',list_thumb_3='{$list_thumb_3}',list_thumb_4='{$list_thumb_4}',list_thumb_5='{$list_thumb_5}',list_thumb_6='{$list_thumb_6}',product_content='{$product_content}',cat_id='{$cat_id}',selling_products='{$selling_products}',qty_product='{$qty_product}',featured_products='{$featured_products}',status='{$status}' where id='{$id}'";
+            $sql = "update `product` set `product_name`='{$product_name}',`price_new`='{$price_new}',`price_old`='{$price_old}',`product_desc`='{$product_desc}',`product_thumb`='{$product_thumb}',`list_thumb_1`='{$list_thumb_1}',`list_thumb_2`='{$list_thumb_2}',`list_thumb_3`='{$list_thumb_3}',`list_thumb_4`='{$list_thumb_4}',`list_thumb_5`='{$list_thumb_5}',`list_thumb_6`='{$list_thumb_6}',`product_content`='{$product_content}',`cat_id`='{$cat_id}',`selling_products`='{$selling_products}',`qty_product`='{$qty_product}',`featured_products`='{$featured_products}',`status`='{$status}' where `id`='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=product&act=main");
@@ -107,7 +111,7 @@ if (isset($_POST['btn_update'])) {
                 $_SESSION['error'] = "Cập nhật thất bại";
             }
         } else {
-            $sql = "update product set product_name='{$product_name}',price_new='{$price_new}',price_old='{$price_old}',product_desc='{$product_desc}',product_content='{$product_content}',cat_id='{$cat_id}',selling_products='{$selling_products}',qty_product='{$qty_product}',featured_products='{$featured_products}',status='{$status}' where id='{$id}'";
+            $sql = "update `product` set `product_name`='{$product_name}',`price_new`='{$price_new}',`price_old`='{$price_old}',`product_desc`='{$product_desc}',`product_content`='{$product_content}',`cat_id`='{$cat_id}',`selling_products`='{$selling_products}',`qty_product`='{$qty_product}',`featured_products`='{$featured_products}',`status`='{$status}' where `id`='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=product&act=main");
@@ -199,7 +203,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=post&act=upload_single">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
                             <div id="show_list_file" >
                                 <img src="uploads/<?php echo $item['product_thumb'] ?> ">
                             </div>
@@ -214,7 +218,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_1</label>
                             <input type="file" name="file_1" id="file_1" data-uri="?mod=product&act=upload_single_1">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_1">
                             <div id="show_list_file_1" >
                                 <img src="uploads/<?php echo $item['list_thumb_1']; ?>">
                             </div>
@@ -229,7 +233,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_2</label>
                             <input type="file" name="file_2" id="file_2" data-uri="?mod=product&act=upload_single_2">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_2">
                             <div id="show_list_file_2" >
                                 <img src="uploads/<?php echo $item['list_thumb_2']; ?>">
                             </div>
@@ -244,7 +248,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_3</label>
                             <input type="file" name="file_3" id="file_3" data-uri="?mod=product&act=upload_single_3">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_3">
                             <div id="show_list_file_3" >
                                 <img src="uploads/<?php echo $item['list_thumb_3']; ?>">
                             </div>
@@ -259,7 +263,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_4</label>
                             <input type="file" name="file_4" id="file_4" data-uri="?mod=product&act=upload_single_4">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_4">
                             <div id="show_list_file_4" >
                                 <img src="uploads/<?php echo $item['list_thumb_4']; ?>">
                             </div>
@@ -274,7 +278,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_5</label>
                             <input type="file" name="file_5" id="file_5" data-uri="?mod=product&act=upload_single_5">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_5">
                             <div id="show_list_file_5" >
                                 <img src="uploads/<?php echo $item['list_thumb_5']; ?>">
                             </div>
@@ -289,7 +293,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix" id="">
                             <label for="detail">Thumb_6</label>
                             <input type="file" name="file_6" id="file_6" data-uri="?mod=product&act=upload_single_6">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt_6">
                             <div id="show_list_file_6" >
                                 <img src="uploads/<?php echo $item['list_thumb_6']; ?>">
                             </div>

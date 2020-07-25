@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 $id = (int) $_GET['id'];
 ?>
 <?php
-$sql = "select *,post.status from post, post_cat where post.cat_id = post_cat.cat_id and id = $id";
+$sql = "select *,post.status from `post`, `post_cat` where post.cat_id = post_cat.cat_id and `id` = $id";
 $result = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($result);
 //show_array($item);
@@ -53,10 +53,10 @@ if (isset($_POST['btn_update'])) {
     if (!empty($_POST['status'])) {
         $status = $_POST['status'];
     }
-// ủa rồi cập nhật ảnh đâu
+//  cập nhật ảnh đâu
     if (empty($error)) {
         if (!empty($_FILES['file']['name'])) {
-            $sql = "update post set post_title='{$post_title}',post_desc='{$post_desc}',post_content='{$post_content}',featured_posts='{$featured_posts}',cat_id='{$cat_id}',images='$images',status='$status' where id='{$id}'";
+            $sql = "update `post` set `post_title`='{$post_title}',`post_desc`='{$post_desc}',`post_content`='{$post_content}',`featured_posts`='{$featured_posts}',`cat_id`='{$cat_id}',`images`='$images',`status`='$status' where `id`='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=post&act=main");
@@ -64,7 +64,7 @@ if (isset($_POST['btn_update'])) {
                 $_SESSION['error'] = "Cập nhật thất bại";
             }
         } else {
-            $sql = "update post set post_title='{$post_title}',post_desc='{$post_desc}',post_content='{$post_content}',featured_posts='{$featured_posts}',cat_id='{$cat_id}',status='$status' where id='{$id}'";
+            $sql = "update `post` set `post_title`='{$post_title}',`post_desc`='{$post_desc}',`post_content`='{$post_content}',`featured_posts`='{$featured_posts}',`cat_id`='{$cat_id}',`status`='$status' where `id`='{$id}'";
             if (mysqli_query($conn, $sql)) {
                 $_SESSION['success'] = "Cập nhật thành công";
                 redirect_to("?mod=post&act=main");
@@ -112,7 +112,7 @@ if (isset($_POST['btn_update'])) {
                         <div class="form_group clearfix">
                             <label for="detail">Hình ảnh</label>
                             <input type="file" name="file" id="file" data-uri="?mod=post&act=upload_single">
-                            
+                            <input type="submit" name="Upload" value="Upload" id="upload_single_bt">
                             <div id="show_list_file" >
                                 <img src="uploads/<?php echo $item['images'] ?> ">
                             </div>
